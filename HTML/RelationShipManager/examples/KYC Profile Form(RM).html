@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Colorlib Templates">
+  <meta name="author" content="Colorlib">
+  <meta name="keywords" content="Colorlib Templates">
+
+  <!-- Title Page-->
+  <title>LankaBangla: The Best Brokerage Firm</title>
+
+  <!-- Icons font CSS-->
+  <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+  <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+  <!-- Font special for pages-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS-->
+  <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+  <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+  <!-- Main CSS-->
+  <link href="css/main.css" rel="stylesheet" media="all">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-success">
+  <!-- -----------navbar code starts from here ---------------->
+    
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Lanka Bangla</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./dashboard.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./KYC Profile Form(RM).html">KYC Form</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../EFT.html">EFT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">RD</a>
+            </li>
+            
+            
+          </ul>
+          
+        </div>
+      </nav>
+      <br>
+      
+      <!-- -----------navbar code ends here  ---------------->
+
+      <!-- -----------form code starts from here  ---------------->
+
+
+  <div class="container mb-2 bg-light">
+        
+
+
+      <!--
+                ------- input name code starts from here --------------
+                --->
+
+      <div class="container">
+        <img class="d-block m-auto img-fluid col-md-4"
+          src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2022/06/14/logo.png" alt="">
+      </div>
+      <div>
+        <header class="text-center">
+          <h4>KYC Profile Form</h4>
+        </header>
+        <header class="text-center">
+          <h4>(Applicable for BO Account)</h4>
+        </header>
+      </div>
+      <div class="container-fluid">
+        <div class="border border-dark text-center text-white ml-1 mr-1 pt-2 pd-0"
+          style="background-color: rgb(223, 161, 86);">
+          <p class="font-weight-bolder">(To be completed by the Account Opening/Relationship Manager)</p>
+        </div>
+      </div>
+      <form action="#">
+        <div class="form-row mb-3 mt-3 ">
+          <div class="col-6">
+            <input type="text" class="form-control  ml-1" id="boid" placeholder="BO ID:" name="boid">
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control mr-1" id="ifr51" placeholder="Internal Reference No./Code No.:"
+              name="ifr">
+          </div>
+        </div>
+
+
+
+
+
+        <div class="form-floating mb-3 ml-1 mr-1">
+          <input id="name" type="acn" class="form-control" placeholder="1. Customer Account Name:">
+        </div>
+        <div class="form-floating mb-3 ml-1 mr-1">
+          <input id="typeofaccount" type="acn" class="form-control " placeholder="2. Type of Account :">
+        </div>
+        <div class="form-floating mb-3 ml-1 mr-1">
+          <input id="Rmn" type="aoname" class="form-control"
+            placeholder="3. Name of Account Opening Officer/Relationship Manager :">
+        </div>
+        <div class="form-floating mb-3 ml-1 mr-1">
+          <input id="sf" type="sf" class="form-control " rows="2"
+            placeholder="4. What is the source of fund?How the source of fund has been verified (Where applicable)">
+        </div>
+
+        <div class="mb-3 ml-1 mr-1">
+          <label for="Ownerbeneficial" class="form-label">5. Information regarding Beneficial Owner of the account (In
+            case
+            of company, information regarding controlling shareholder(s) and
+            the shareholder(s) holding 20% or more shares)</label>
+          <input type="text" id="bo" class="form-control" />
+        </div>
+
+        <div class="form-check-inline ml-1 mr-1 mb-2">
+          <label for="passno.">6.Passport No.:</label>
+
+          <input type="text" id="pn" class="form-control-inline  ml-1 " />
+          <label for="passno." class="ml-1">Whether photocopy obtained? (where applicable)?</label>
+          <!----
+                          <label for="passno.">Whether photocopy obtained? (where applicable)?</label>
+                    
+                    <input type="radio" class="form-check-input" id="Yes " />
+                        <label for="Yes "> Yes</label>
+                    
+                
+                        <input type="radio" class="form-check-input" id=" No" />
+                        <label for="No "> No</label>
+                        -->
+
+          <input type="checkbox" class="form-check-input  ml-1" id="y51">
+          <label for="y">Yes</label>
+
+          <input type="checkbox" class="form-check-input  ml-1" id="n52">
+          <label for="y">No</label>
+
+
+        </div>
+
+        <div class="form-check-inline ml-1 mr-1 mb-2">
+          <label for="vcno.">7. Voter ID Card No.:</label>
+
+          <input type="text" id="vc" class="form-control-inline ml-1" />
+          <label for="votercardno." class="ml-1">Whether photocopy obtained? (where applicable)?</label>
+          <input type="checkbox" class="form-check-input  ml-1" id="y53">
+          <label for="y">Yes</label>
+
+          <input type="checkbox" class="form-check-input  ml-1" id="n54">
+          <label for="y">No</label>
+
+        </div>
+
+
+        <div class="form-check-inline ml-1 mr-1 mb-2">
+          <label for="nid">8. National id No.:</label>
+
+          <input type="text" id="nidno." class="form-control-inline  ml-1" />
+          <label for="nationalcardno." class="ml-1">Whether photocopy obtained? (where applicable)?</label>
+          <input type="checkbox" class="form-check-input ml-1" id="y55">
+          <label for="y">Yes</label>
+
+          <input type="checkbox" class="form-check-input  ml-1" id="n56">
+          <label for="y">No</label>
+
+        </div>
+
+
+        <div class="form-check-inline ml-1 mr-1 mb-2">
+          <label for="TINno.">9. T.I.N No.:</label>
+
+          <input type="text" id="vc51" class="form-control-inline ml-1" />
+          <label for="tinno." class="ml-1">Whether photocopy obtained? (where applicable)?</label>
+          <input type="checkbox" class="form-check-input ml-1" id="y57">
+          <label for="y">Yes</label>
+
+          <input type="checkbox" class="form-check-input  ml-1" id="n58">
+          <label for="y">No</label>
+
+        </div>
+
+
+        <div class="form-check-inline ml-1 mr-1 mb-2">
+          <label for="vrno.">10. Var Reg. No.:</label>
+
+          <input type="text" id="vr52" class="form-control-inline ml-1" />
+          <label for="varregno." class="ml-1">Whether photocopy obtained? (where applicable)?</label>
+          <input type="checkbox" class="form-check-input  ml-1" id="y59">
+          <label for="y">Yes</label>
+
+          <input type="checkbox" class="form-check-input  ml-1" id="n60">
+          <label for="y">No</label>
+
+        </div>
+
+        <div class="form-check-inline ml-1 mr-1 mb-2">
+          <label for="dlno.">11. Driving License No.:</label>
+
+          <input type="text" id="dl51" class="form-control-inline  ml-1" />
+          <label for="drivinglicenseno." class="ml-1">Whether photocopy obtained? (where applicable)?</label>
+          <input type="checkbox" class="form-check-input  ml-1" id="y61">
+          <label for="y">Yes</label>
+
+          <input type="checkbox" class="form-check-input  ml-1" id="n62">
+          <label for="y">No</label>
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class="mb-3 ml-1 mr-1">
+          <label for="What does the customer do?">12. What does the customer do? :</label>
+          <textarea class="form-control bg-light" rows="2" id="occupation"
+            placeholder="Mention the occupation of the client in detail:"></textarea>
+        </div>
+        <div class="form-group mb-3 ml-1 mr-1">
+          <label for="comment">Comments(If any):</label>
+          <textarea class="form-control bg-light" rows="2" id="comment1"></textarea>
+          <label for="riskconsiderationcomment">(Comments may be made in this part regarding risk of the customer in
+            consideration of subjective judgement)</label>
+        </div>
+
+        <div class="row mb-2 ml-1 mr-1">
+          <div class="border border-dark col-lg-3 ">
+            <input type="file" class=" bg-light file border mb-5 form-control" id="file1">
+
+            <div class=" text-center mt-1">
+              <label for="signature" class="mt-5">Signature</label>
+            </div>
+
+          </div>
+          <div class="border border-dark col-lg-3">
+            <label for="rm form-control-inline">A/C Opening
+              Officer/Relationship
+              Manager:</label>
+            <div><input type="file" class="bg-light file border mt-2 mb-2 form-control" id="file2"></div>
+            <div class="text-center">
+              <label for="signature">Signature(With seal)</label>
+            </div>
+
+            <div><label for="Name">Name:</label>
+
+              <input type="text" id="mrn" class="bg-light form-control-inline ml-1 " />
+            </div>
+            <div><label for="Date">Date:</label>
+
+              <input type="text" id="mrd" class="bg-light form-control-inline ml-1 " />
+            </div>
+
+
+          </div>
+
+          <div class="border border-dark col-lg-3">
+            <label for="rm form-control-inline">Verified by:</label>
+            <div><input type="file" class=" bg-light file border mt-2 mb-2 form-control" id="file3"></div>
+            <div class="text-center">
+              <label for="signature">Signature(With seal)</label>
+            </div>
+
+            <div><label for="Name">Name:</label>
+
+              <input type="text" id="mrn1" class="bg-light form-control-inline ml-1 " />
+            </div>
+            <div><label for="Date">Date:</label>
+
+              <input type="text" id="mrd1" class="bg-light form-control-inline ml-1 " />
+            </div>
+
+
+          </div>
+
+          <div class="border border-dark col-lg-3">
+            <label for="rm form-control-inline">Approved by:</label>
+            <div><input type="file" class=" bg-light border mt-2 mb-2 form-control" id="file4"></div>
+            <div class="text-center">
+              <label for="signature">Signature(With seal)</label>
+            </div>
+
+            <div><label for="Name">Name:</label>
+
+              <input type="text" id="mrn2" class=" bg-light form-control-inline ml-1 " />
+            </div>
+            <div><label for="Date">Date:</label>
+
+              <input type="text" id="mrd2" class="form-control-inline bg-light ml-1 " />
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+        <div class="content">
+          <div class="container-fluid">
+            <div>
+
+              <a href="./openboacc.html"
+                class="btn btn-info mb-1" target="blank">PREVIOUS</a>
+
+
+            </div>
+        </div>
+            
+      </form>
+
+
+
+  </div>
+ 
+  
+
+</body>
+
+<!-- -----------form code ends here  ---------------->
+
+
+
+
+
+<!-- Jquery JS-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<!-- Vendor JS-->
+<script src="vendor/select2/select2.min.js"></script>
+<script src="vendor/datepicker/moment.min.js"></script>
+<script src="vendor/datepicker/daterangepicker.js"></script>
+
+<!-- Main JS-->
+<script src="js/global.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

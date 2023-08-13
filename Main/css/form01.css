@@ -1,0 +1,19 @@
+html{
+    scroll-behavior: smooth;
+}
+#card{
+    border-radius: 25px;
+    border-style: solid;
+    border-width: medium;
+    border-color: green;
+    padding: 20px;
+    box-shadow: .8px .9px 3px grey;
+}
+#card:hover
+{
+    box-shadow: 1px 8px 20px grey;
+    
+}
+#form01Title{
+    border-radius: 15px;
+}

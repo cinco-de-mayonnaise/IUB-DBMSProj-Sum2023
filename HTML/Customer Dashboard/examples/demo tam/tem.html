@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settlement Dashboard</title>
+    <style>
+        /* Add your CSS styling here */
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Settlement Dashboard</h1>
+        <!-- Add login functionality here -->
+    </header>
+
+    <!-- Analysis and Graph -->
+    <section>
+        <h2>Analysis and Graph</h2>
+        <!-- Add your analysis and graph elements here -->
+    </section>
+
+    <!-- New Entries -->
+    <section>
+        <h2>New Entries</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Form ID</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populate this table with new entries (approved/declined) from the server -->
+                <tr>
+                    <td>Form-123</td>
+                    <td>Approved</td>
+                    <td>
+                        <button onclick="changeStatus('Form-123', 'approve')">Approve</button>
+                        <button onclick="changeStatus('Form-123', 'decline')">Decline</button>
+                        <button onclick="viewEntry('Form-123')">View</button>
+                    </td>
+                </tr>
+                <!-- Add more rows for other entries -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        // JavaScript functions to handle actions (change status, view entry, etc.) will go here
+
+        function changeStatus(formId, status) {
+            // Send the updated status to the server and handle the response
+            // You will need to use AJAX or fetch() to send a request to the server
+        }
+
+        function viewEntry(formId) {
+            // Retrieve the details of the selected entry from the server and display them
+            // You will need to use AJAX or fetch() to send a request to the server
+        }
+    </script>
+</body>
+</html>

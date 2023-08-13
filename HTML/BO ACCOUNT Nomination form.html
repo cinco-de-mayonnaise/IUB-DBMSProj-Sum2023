@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Title Page -->
+    <title>LangkaBangla</title>
+    <link rel="stylesheet" href="css/form01.css">
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        /* Add custom CSS here */
+        .form-container {
+            padding: 50px;
+            /* Adjust the padding value as needed */
+            background-color: #28a745;
+            /* Green background color */
+        }
+    </style>
+
+</head>
+
+<body class="bg-success">
+    <!-- -----------navbar code starts from here  ---------------->
+    <!-- Navbar code remains the same -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Lanka Bangla</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./Customer Dashboard/examples/dashboard.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./CAI_form.html">CAI FORM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./BO Accounts Form.html">BOAO Form</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./BO ACCOUNT Nomination form.html">BOAN Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./POA.html">POA Form
+              </a>
+            </li>
+            
+            
+          </ul>
+          
+        </div>
+    </nav>
+    <br>
+    <!-- -----------navbar code ends here  ---------------->
+
+    <!-- -----------form code starts from here  ---------------->
+    <div class="container form-container">
+        <div>
+            <form class="bg-light p-4" id="card">
+                <h3 class="text-center bg-warning p-2 shadow" id="form03Title">BO Account Nomination Form</h3>
+                <p class="text-justify">Please complete all details in CAPITAL letters. Please fill all names correctly.
+                    All communications shall be sent to the correspondence address of only the First Named Account
+                    Holder as
+                    specified in BO Account Opening Form 02.</p>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputApplicationNo">Application No</label>
+                        <input type="number" class="form-control" id="inputApplicationNo"
+                            placeholder="Enter Application Number">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputDate">Date</label>
+                        <input type="date" class="form-control" id="inputDate">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <p>Name of CDBL Participant: LankaBangla Securities Ltd.</p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        <label for="inputCdblParticipantId">CDBL Participant Id</label>
+                        <input type="number" class="form-control" id="inputCdblParticipantId"
+                            placeholder="Click to Enter">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="inputAccHoldersBoId">Account Holder's BO Id</label>
+                        <input type="number" class="form-control" id="inputAccHoldersBoId" placeholder="Click to Enter">
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label for="nameOfAccHolder">Name of Account Holder (Insert full name starting with Title i.e.
+                        Mr./Mrs./Ms/Dr, abbreviate only if over 30 characters)</label>
+                    <input type="text" class="form-control" id="nameOfAccHolder" placeholder="Click to Enter">
+                </div>
+
+                <div class="form-group col-md-12">
+                    <p>I/We nominate the following person(s) who is/are entitled to receive securities outstanding
+                        in
+                        my/our account in the event of the death of the sole holder/all the joint holders.</p>
+                </div>
+
+                <form class="bg-light p-4" id="form03NomineeDetails">
+                    <h3 class="text-left bg-warning p-2 shadow" id="form03Title">1. Nominee/Heirs Details</h3>
+                    <div class="form-row" id="card" id="fAccountant">
+                        <div class="form-group col-md-12">
+                            <div style="margin-bottom: 5px;"></div>
+                            <h4>Nominee 1</h4>
+                            <div style="margin-bottom: 15px;"></div>
+                            <label for="inputApplicationNo">Full Name</label>
+                            <input type="text" class="form-control" id="nomOneFullname" placeholder="Full Name">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-10">
+                                <!-- <div style="margin-bottom: 10px;"></div> -->
+                                <label for="inputCdblParticipantId">Short Name (Insert full name starting with Title
+                                    i.e.
+                                    Mr./Mrs./Ms/Dr, abbreviate only if over 30 characters)</label>
+                                <input type="text" class="form-control" id="nomOneFullname" placeholder="Full Name">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputAccHoldersBoId">Title i.e. Mr./Mrs./Ms</label>
+                                <input type="text" class="form-control" id="inputAccHoldersBoId"
+                                    placeholder="Click to Enter">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-7">
+                            <label for="inputApplicationNo">Relationship with Nominee</label>
+                            <input type="text" class="form-control" id="inputApplicationNo"
+                                placeholder="Enter Application Number">
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputDate">Percentage (%)</label>
+                            <input type="number" class="form-control" id="inputDate">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="inputApplicationNo">Address</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3.5">
+                            <label for="inputApplicationNo">City</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-2.5">
+                            <label for="inputApplicationNo">Post Code</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputApplicationNo">State/Division</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-3.5">
+                            <label for="inputApplicationNo">Country</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputApplicationNo">Telephone</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputApplicationNo">Mobile Phone</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputApplicationNo">Fax</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputApplicationNo">Email</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputApplicationNo">Passport Number</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputApplicationNo">Issue Place</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputApplicationNo">Issue Date</label>
+                            <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputApplicationNo">Expiary Date</label>
+                            <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Resident</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Non-resident</label>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputApplicationNo">Nationality</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Click to Enter">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputApplicationNo">Date of Birth</label>
+                            <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <div style="margin-bottom: 5px;"></div>
+                            <h6>Guardian's Details (If Nominee is a Minor)</h6>
+                            <div style="margin-bottom: 15px;"></div>
+                            <label for="inputApplicationNo">Name in Full</label>
+                            <input type="text" class="form-control" id="nomOneFullname" placeholder="Click to Enter">
+                        </div>
+                        <div class="form-group col-md-10">
+                            <label for="inputCdblParticipantId">Short Name (Insert full name starting with Title i.e.
+                                Mr./Mrs./Ms/Dr, abbreviate only if over 30 characters)</label>
+                            <input type="text" class="form-control" id="nomOneFullname" placeholder="Full Name">
+                            <div style="margin-bottom: 25px;"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputApplicationNo">Relationship with Nominee</label>
+                            <input type="text" class="form-control" id="inputApplicationNo"
+                                placeholder="Enter Application Number">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputDate">Date of Birth of Minor</label>
+                            <input type="date" class="form-control" id="inputDate">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputDate">Maturity Date of Minor</label>
+                            <input type="date" class="form-control" id="inputDate">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="inputApplicationNo">Address</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3.5">
+                            <label for="inputApplicationNo">City</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-2.5">
+                            <label for="inputApplicationNo">Post Code</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputApplicationNo">State/Division</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-3.5">
+                            <label for="inputApplicationNo">Country</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputApplicationNo">Telephone</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputApplicationNo">Mobile Phone</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputApplicationNo">Fax</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputApplicationNo">Email</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputApplicationNo">Passport Number</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputApplicationNo">Issue Place</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputApplicationNo">Issue Date</label>
+                            <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputApplicationNo">Expiary Date</label>
+                            <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Resident</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Non-resident</label>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputApplicationNo">Nationality</label>
+                            <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Click to Enter">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputApplicationNo">Date of Birth</label>
+                            <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                                placeholder="Enter Address">
+                        </div>
+
+                </form>
+        </div>
+
+        <!-- Nominee 2 code starts from here -->
+
+        <div>
+            <form class="bg-light p-4" id="form03NomineeDetails">
+                <!-- <h3 class="text-left bg-warning p-2 shadow" id="form03Title">1. Nominee/Heirs Details</h3> -->
+                <div class="form-row" id="card" id="fAccountant">
+                    <div class="form-group col-md-12">
+                        <div style="margin-bottom: 5px;"></div>
+                        <h4>Nominee 2</h4>
+                        <div style="margin-bottom: 15px;"></div>
+                        <label for="inputApplicationNo">Full Name</label>
+                        <input type="text" class="form-control" id="nomOneFullname" placeholder="Full Name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-10">
+                            <!-- <div style="margin-bottom: 10px;"></div> -->
+                            <label for="inputCdblParticipantId">Short Name (Insert full name starting with Title
+                                i.e.
+                                Mr./Mrs./Ms/Dr, abbreviate only if over 30 characters)</label>
+                            <input type="text" class="form-control" id="nomOneFullname" placeholder="Full Name">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputAccHoldersBoId">Title i.e. Mr./Mrs./Ms</label>
+                            <input type="text" class="form-control" id="inputAccHoldersBoId"
+                                placeholder="Click to Enter">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-7">
+                        <label for="inputApplicationNo">Relationship with Nominee</label>
+                        <input type="text" class="form-control" id="inputApplicationNo"
+                            placeholder="Enter Application Number">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="inputDate">Percentage (%)</label>
+                        <input type="number" class="form-control" id="inputDate">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputApplicationNo">Address</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3.5">
+                        <label for="inputApplicationNo">City</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-2.5">
+                        <label for="inputApplicationNo">Post Code</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputApplicationNo">State/Division</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-3.5">
+                        <label for="inputApplicationNo">Country</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputApplicationNo">Telephone</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputApplicationNo">Mobile Phone</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputApplicationNo">Fax</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputApplicationNo">Email</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputApplicationNo">Passport Number</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputApplicationNo">Issue Place</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputApplicationNo">Issue Date</label>
+                        <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputApplicationNo">Expiary Date</label>
+                        <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Resident</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Non-resident</label>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="inputApplicationNo">Nationality</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Click to Enter">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputApplicationNo">Date of Birth</label>
+                        <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <div style="margin-bottom: 5px;"></div>
+                        <h6>Guardian's Details (If Nominee is a Minor)</h6>
+                        <div style="margin-bottom: 15px;"></div>
+                        <label for="inputApplicationNo">Name in Full</label>
+                        <input type="text" class="form-control" id="nomOneFullname" placeholder="Click to Enter">
+                    </div>
+                    <div class="form-group col-md-10">
+                        <label for="inputCdblParticipantId">Short Name (Insert full name starting with Title i.e.
+                            Mr./Mrs./Ms/Dr, abbreviate only if over 30 characters)</label>
+                        <input type="text" class="form-control" id="nomOneFullname" placeholder="Full Name">
+                        <div style="margin-bottom: 25px;"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputApplicationNo">Relationship with Nominee</label>
+                        <input type="text" class="form-control" id="inputApplicationNo"
+                            placeholder="Enter Application Number">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputDate">Date of Birth of Minor</label>
+                        <input type="date" class="form-control" id="inputDate">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputDate">Maturity Date of Minor</label>
+                        <input type="date" class="form-control" id="inputDate">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputApplicationNo">Address</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3.5">
+                        <label for="inputApplicationNo">City</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-2.5">
+                        <label for="inputApplicationNo">Post Code</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputApplicationNo">State/Division</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-3.5">
+                        <label for="inputApplicationNo">Country</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputApplicationNo">Telephone</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputApplicationNo">Mobile Phone</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputApplicationNo">Fax</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputApplicationNo">Email</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputApplicationNo">Passport Number</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputApplicationNo">Issue Place</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputApplicationNo">Issue Date</label>
+                        <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputApplicationNo">Expiary Date</label>
+                        <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Resident</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Non-resident</label>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="inputApplicationNo">Nationality</label>
+                        <input type="text" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Click to Enter">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputApplicationNo">Date of Birth</label>
+                        <input type="date" class="form-control" id="inputAddressOfNomineeOne"
+                            placeholder="Enter Address">
+                    </div>
+
+            </form>
+        </div>
+        <form class="bg-light p-4" id="form03NomineeDetails">
+            <h3 class="text-left badge-warning p-2 shadow" id="form03Title">2. Photograph of Nominee/Heirs</h3>
+            <div class="form-row" id="card" id="fAccountant">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="4Sig">Nominee/Heir 1</label>
+                        <input type="file" class="form-control" id="4Sig" placeholder="Insert Image">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="4Sig">Nominee/Heir 2</label>
+                        <input type="file" class="form-control" id="4Sig" placeholder="Insert Image">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="4Sig">Guardian 1</label>
+                        <input type="file" class="form-control" id="4Sig" placeholder="Insert Image">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="4Sig">Guardian 2</label>
+                        <input type="file" class="form-control" id="4Sig" placeholder="Insert Image">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row" id="card" id="6Box">
+                <div class="form-group col-md-4">
+                    <label for="6fName">Nominee/Heir 1</label>
+                    <input type="text" class="form-control" id="6fName" placeholder="Enter Name">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6fSig">Signature</label>
+                    <input type="file" class="form-control" id="6fSig" placeholder="">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6sigDate">Signature Date</label>
+                    <input type="date" class="form-control" id="6sigDate">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="6sName">Guardian 1</label>
+                    <input type="text" class="form-control" id="6sName" placeholder="Enter Name">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6sSig">Signature</label>
+                    <input type="file" class="form-control" id="6sSig" placeholder="">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6sSigDate">Signature Date</label>
+                    <input type="date" class="form-control" id="6sSigDate">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="6oName">Nominee/Heir 2</label>
+                    <input type="text" class="form-control" id="6oName" placeholder="Enter Name">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6oSig">Signature</label>
+                    <input type="file" class="form-control" id="6oSig" placeholder="">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6oSigDate">Signature Date</label>
+                    <input type="date" class="form-control" id="6oSigDate">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="6oName">Guardian 2</label>
+                    <input type="text" class="form-control" id="6oName" placeholder="Enter Name">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6oSig">Signature</label>
+                    <input type="file" class="form-control" id="6oSig" placeholder="">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6oSigDate">Signature Date</label>
+                    <input type="date" class="form-control" id="6oSigDate">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="6oName">First Account Holder</label>
+                    <input type="text" class="form-control" id="6oName" placeholder="Enter Name">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6oSig">Signature</label>
+                    <input type="file" class="form-control" id="6oSig" placeholder="">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6oSigDate">Signature Date</label>
+                    <input type="date" class="form-control" id="6oSigDate">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="6oName">Second Account Holder</label>
+                    <input type="text" class="form-control" id="6oName" placeholder="Enter Name">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6oSig">Signature</label>
+                    <input type="file" class="form-control" id="6oSig" placeholder="">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="6oSigDate">Signature Date</label>
+                    <input type="date" class="form-control" id="6oSigDate">
+                </div>
+            </div>
+        </form>
+
+        </form>
+    </div>
+    <!-- -----------form code ends here  ---------------->
+
+    <!-- Other content goes here -->
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+3GnMq0X4y9sH/1z5UMGKwZbI2/Jf3Q3UpfZzLnTAPFA+0e"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
