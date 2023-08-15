@@ -1,4 +1,4 @@
-CREATE TABLE `lbangla` (
+CREATE TABLE `kyc` (
   `BO_ID` int(20) NOT NULL,
   `Internal_Ref_No` int(20) NOT NULL,
   `Customer_Account_Name` varchar(30) NOT NULL,

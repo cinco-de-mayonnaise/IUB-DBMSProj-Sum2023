@@ -43,10 +43,10 @@ if ( ! $terms) {
 }   
 */
 
-$host = "localhost";
-$dbname = "cai_db";
+$host = "localhost:3307";
+$dbname = "lankabangla";
 $username = "root";
-$password = "";
+$password = "root";
         
 $conn = mysqli_connect(hostname: $host,
                        username: $username,

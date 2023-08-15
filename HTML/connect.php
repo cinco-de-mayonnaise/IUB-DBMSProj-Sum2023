@@ -1,9 +1,9 @@
 <?php
 // Database configuration
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost:3307');
 define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'BO_Acc');
+define('DB_PASSWORD', 'root');
+define('DB_NAME', 'lankabangla');
 
 // Create database connection
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);

@@ -1,4 +1,23 @@
 <!doctype html>
+<?php 
+function connect_to_db()
+{
+	$servername = "localhost:3307";
+	$dbusername = "root";
+	$dbpassword = "root";
+	$dbname = "lankabangla";
+	
+	// Create a new mysqli instance
+	$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+	
+	// Check connection
+	if ($conn->connect_error)
+		die("Connection failed: " . $conn->connect_error);
+		
+	return $conn;
+}
+
+?>
 
 <html lang="en">
   <head>
@@ -72,17 +91,7 @@
 										$username = $_POST['TFusername'];
 										$userpw = $_POST['TFpassword'];
 
-										$servername = "localhost:3307";
-										$dbusername = "root";
-										$dbpassword = "root";
-										$dbname = "abdullahtest";
-										
-										// Create a new mysqli instance
-										$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-										
-										// Check connection
-										if ($conn->connect_error)
-											die("Connection failed: " . $conn->connect_error);
+										$conn = connect_to_db();
 							
 										$stmt = $conn->prepare("SELECT * FROM login WHERE username = ? AND password = ?");
 										$stmt->bind_param("ss", $username, $userpw);
