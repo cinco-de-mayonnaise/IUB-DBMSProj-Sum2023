@@ -1,0 +1,13 @@
+CREATE TABLE `user` (
+  `Branch` varchar(20) NOT NULL,
+  `Username` varchar(20) NOT NULL,
+  `Email_Address` varchar(20) NOT NULL,
+  `first_name` varchar(20) NOT NULL,
+  `last_name` varchar(20) NOT NULL,
+  `address` varchar(20) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `country` varchar(20) NOT NULL,
+  `Postal_Code` int(4) NOT NULL,
+  `About` varchar(50) NOT NULL,
+  PRIMARY KEY (`Email_Address`)
+) 
