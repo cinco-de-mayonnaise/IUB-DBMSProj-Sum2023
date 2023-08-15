@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
 
@@ -38,17 +39,17 @@
 									</p>
 								</div>
 			      	</div>
-					<form action="#" class="signin-form">
+					<form action="#" method="POST" class="signin-form">
 			      		<div class="form-group mb-3">
 			      			<label class="label" for="name">Username</label>
-			      			<input type="text" class="form-control" id="username" placeholder="Username" required>
+			      			<input type="text" name="TFusername" class="form-control" id="username" placeholder="Username" required>
 			      		</div>
 						<div class="form-group mb-3">
 							<label class="label" for="password">Password</label>
-						<input type="password" class="form-control" id="password" placeholder="Password" required>
+						<input type="password" name="TFpassword" class="form-control" id="password" placeholder="Password" required>
 						</div>
 						<div class="form-group">
-							<button type="submit" target="_self" onclick="validate()" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+							<button type="submit" target="_self" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
 						</div>
 		            	<div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">
@@ -61,6 +62,64 @@
 										<a href="#">Forgot Password</a>
 									</div>
 		            	</div>
+
+							<?php
+								if (isset($_POST['TFusername']))
+								{
+									if (isset($_POST['TFpassword']))
+									{
+										// start checking here, and move to webpage
+										$username = $_POST['TFusername'];
+										$userpw = $_POST['TFpassword'];
+
+										$servername = "localhost:3307";
+										$dbusername = "root";
+										$dbpassword = "root";
+										$dbname = "abdullahtest";
+										
+										// Create a new mysqli instance
+										$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+										
+										// Check connection
+										if ($conn->connect_error)
+											die("Connection failed: " . $conn->connect_error);
+							
+										$stmt = $conn->prepare("SELECT * FROM login WHERE username = ? AND password = ?");
+										$stmt->bind_param("ss", $username, $userpw);
+										$stmt->execute();  // execute the query
+										$result = $stmt->get_result();   // get results and store into $result
+
+										if ($result->num_rows > 0)   // a valid result returns only if username and password both match
+										{
+											// User account found, get usertype
+											$row = $result->fetch_assoc();   
+											
+											switch ($row['usertype'])   // password matches
+											{
+												/// NOTE: THE DATABASE'S LOGIN TABLE HAS A CONSTRAINT (chk_usertype) THAT ENSURES A USER MUST BE ONLY ONE OF THE FOUR TYPES BELOW.
+												case "Admin": 
+													echo "<script> window.location.href = \"./HTML/adminDash/examples/dashboard.html\"; </script>";
+													break;
+												case "Customer":
+													echo "<script> window.location.href = \"./HTML/Customer Dashboard/examples/dashboard.html\"; </script>";
+													break;
+												case "RelManager":
+													echo "<script> window.location.href = \"./HTML/RelationShipManager/examples/dashboard.html\"; </script>";
+													break;
+												case "Head":
+													echo "<script> window.location.href = \"./HTML/HedOfSettlement/examples/dashboard.html\"; </script>";
+													break;
+											}
+										}
+										else
+											echo "<script> alert(\"Enter a valid password!\");</script>";
+									}
+									else
+									{
+										echo "<script> alert(\"Enter a valid password!\");</script>";
+									}
+								}
+							?>
 		          </form>
 		          <p class="text-center">Not a member? <a data-toggle="tab" href="./signUpForm/signup.html">Sign Up</a></p>
 		        </div>
@@ -69,50 +128,17 @@
 			</div>
 		</div>
 	</section>
-	<script>
-		function validate()
-		{
-			var username=document.getElementById("username").value;
-			var password=document.getElementById("password").value;
-			
-			if(username!="" && password!=""){
-				if(username=="admin" && password=="admin")
-				{
-					 
-					 window.open("./HTML/adminDash/examples/dashboard.html");
-					 return false;
-					 
-				}
-				else if(username=="customer" && password=="customer")
-				{
-					 
-					 window.open("./HTML/Customer Dashboard/examples/dashboard.html");
-					 
-				}
-				else if(username=="head" && password=="head")
-				{
-					 
-					 window.open("./HTML/HedOfSettlement/examples/dashboard.html");
-					 
-				}
-				else if(username=="relM" && password=="relM")
-				{
-					 
-					 window.open("./HTML/RelationShipManager/examples/dashboard.html");
-					 
-				}
-				else{
-					alert("Enter correct userName and password");
-				}
-			}
-			else{
-				alert("Enter userName and password");
-			}
-			
 
-		}
-		
-	</script>
+
+	<!-- Overhaul (Abdullah):  The problem is that we can't figure out how to send information about the user who logged in using the javascript, so I figured out a solution by using PHP+MySQL. 
+
+	Hence the following changes:  1) Remove onClick action and all calls to `validate()`, (I suppose there will be use for javascript navigation in other pages but its not necessary here.)
+		2) Introduction of php field "name"s and <form> element to redirect form data to login verifier (login.php), which will then move user to corresponding page.
+
+
+			NOTE: some html files have to be renamed to .php, this will inevitably break navbar so pls fix
+	-->
+	
 	<script src="../login-form-14/js/bootstrap.min.js"></script>
   	<script src="../login-form-14/js/jquery.min.js"></script>
   	<script src="../login-form-14/js/main.js"></script>
