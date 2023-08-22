@@ -1,4 +1,24 @@
 <!doctype html>
+<?php 
+function connect_to_db()
+{
+	$servername = "localhost:3307";
+	$dbusername = "root";
+	$dbpassword = "root";
+	$dbname = "lankabangla";
+	
+	// Create a new mysqli instance
+	$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+	
+	// Check connection
+	if ($conn->connect_error)
+		die("Connection failed: " . $conn->connect_error);
+		
+	return $conn;
+}
+
+?>
+
 <html lang="en">
   <head>
 
@@ -38,7 +58,7 @@
 									</p>
 								</div>
 			      	</div>
-					<form action="index.php" method="POST" class="signin-form">
+					<form action="#" method="POST" class="signin-form">
 			      		<div class="form-group mb-3">
 			      			<label class="label" for="name">Username</label>
 			      			<input type="text" name="TFusername" class="form-control" id="username" placeholder="Username" required>
@@ -61,6 +81,54 @@
 										<a href="#">Forgot Password</a>
 									</div>
 		            	</div>
+
+							<?php
+								if (isset($_POST['TFusername']))
+								{
+									if (isset($_POST['TFpassword']))
+									{
+										// start checking here, and move to webpage
+										$username = $_POST['TFusername'];
+										$userpw = $_POST['TFpassword'];
+
+										$conn = connect_to_db();
+							
+										$stmt = $conn->prepare("SELECT * FROM login WHERE username = ? AND password = ?");
+										$stmt->bind_param("ss", $username, $userpw);
+										$stmt->execute();  // execute the query
+										$result = $stmt->get_result();   // get results and store into $result
+
+										if ($result->num_rows > 0)   // a valid result returns only if username and password both match
+										{
+											// User account found, get usertype
+											$row = $result->fetch_assoc();   
+											
+											switch ($row['usertype'])   // password matches
+											{
+												/// NOTE: THE DATABASE'S LOGIN TABLE HAS A CONSTRAINT (chk_usertype) THAT ENSURES A USER MUST BE ONLY ONE OF THE FOUR TYPES BELOW.
+												case "Admin": 
+													echo "<script> window.location.href = \"./HTML/adminDash/examples/dashboard.html\"; </script>";
+													break;
+												case "Customer":
+													echo "<script> window.location.href = \"./HTML/Customer Dashboard/examples/dashboard.html\"; </script>";
+													break;
+												case "RelManager":
+													echo "<script> window.location.href = \"./HTML/RelationShipManager/examples/dashboard.html\"; </script>";
+													break;
+												case "Head":
+													echo "<script> window.location.href = \"./HTML/HedOfSettlement/examples/dashboard.html\"; </script>";
+													break;
+											}
+										}
+										else
+											echo "<script> alert(\"Enter a valid password!\");</script>";
+									}
+									else
+									{
+										echo "<script> alert(\"Enter a valid password!\");</script>";
+									}
+								}
+							?>
 		          </form>
 		          <p class="text-center">Not a member? <a data-toggle="tab" href="./signUpForm/signup.html">Sign Up</a></p>
 		        </div>

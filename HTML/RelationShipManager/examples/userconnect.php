@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Email Address is required.";
     } else {
         // Database connection
-        $conn = new mysqli('localhost', 'root', '', 'kyc');
+        $conn = new mysqli('localhost:3307', 'root', 'root', 'lankabangla');
         if ($conn->connect_error) {
             die('Connection Failed: ' . $conn->connect_error);
         } else {

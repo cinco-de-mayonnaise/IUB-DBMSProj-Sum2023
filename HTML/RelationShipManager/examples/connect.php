@@ -31,11 +31,11 @@ $Signature_of_approver = $_POST['Signature_of_approver'];
 $Approved_by = $_POST['Approved_by'];
 $Approved_Date = $_POST['Approved_Date'];
 
-$conn = new mysqli('localhost', 'root', '', 'kyc');
+$conn = new mysqli('localhost:3307', 'root', 'root', 'lankabangla');
 if ($conn->connect_error) {
     die('Connection Failed: ' . $conn->connect_error);
 } else {
-    $stmt = $conn->prepare("INSERT INTO lbangla(BO_ID, Internal_Ref_No, Customer_Account_Name, Account_Type, Relationship_Manager_Name,
+    $stmt = $conn->prepare("INSERT INTO kyc(BO_ID, Internal_Ref_No, Customer_Account_Name, Account_Type, Relationship_Manager_Name,
      Fund_Source, BO_Info, Passport_No, PO_for_Passport, Voter_ID, PO_for_Voter_ID, NID, PO_for_NID, TIN_No,
      PO_for_TIN, VAT_Reg_No, PO_for_VAT_Reg, Driving_License_No, PO_for_DL_no, Occupation, comments, signatures, RM_signature,
      Name_of_RM, Date, signature_of_verifier, verified_by, Date_of_verification, Signature_of_approver, Approved_by,
