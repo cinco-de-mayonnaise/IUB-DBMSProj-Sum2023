@@ -49,7 +49,7 @@
     <!-- -----------navbar code ends from here  ---------------->
     <div class="formMain">
         <!-- ----------- BO form code starts from here  ---------------->
-        <form class="form1" id="myForm" action="https://example.com/submit" method="post">
+        <form class="form1" id="myForm" action="connect.php" method="post">
             <div class="form0">
                 <div class="p-3 mb-2 bg-warning text-white text-center font-weight-bold">
                     <h5>BO Account Opening Form</h5>
@@ -59,41 +59,41 @@
                     All communications shall be sent only to the First
                     Named Account Holder's correspondence address.</p><br>
                 <!-- -----------form code starts from here  ---------------->
-
+    
                 <div class="row">
                     <div class="col form-inline">
-                        <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Application</label>
-                        <input type="text" class="form-control" id="application" size="30">
+                        <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Application ID</label>
+                        <input type="text" class="form-control" id="application" name="app_id" size="30">
                     </div>
                     <div class="col form-inline">
                         <label class="ml=8 mr-3pl-3 pr-3 font-weight-bold">Date</label>
-                        <input type="date" class="form-control" id="date">
+                        <input type="date" class="form-control" name="date" id="date">
                     </div>
                 </div><br>
                 <p class="text-left pl-4 pr-2"> Please Tick whichever is:</p><br>
-
-
+    
+    
                 <fieldset class="form-group row ml-2 mr-2 p-2 border border-success">
                     <legend class="col-form-label col-sm-2 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">
                         BO
                         Category :</legend>
                     <div class="col-sm-15">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                            <input class="form-check-input" type="radio" name="catagory" id="gridRadios1"
                                 value="Regular">
                             <label class="form-check-label" for="gridRadios1">
                                 Regular
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                            <input class="form-check-input" type="radio" name="catagory" id="gridRadios2"
                                 value="Omnibus">
                             <label class="form-check-label" for="gridRadios2">
                                 Omnibus
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                            <input class="form-check-input" type="radio" name="catagory" id="gridRadios3"
                                 value="Clearing">
                             <label class="form-check-label" for="gridRadios3">
                                 Clearing
@@ -106,21 +106,21 @@
                         :</legend>
                     <div class="col-sm-15">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4"
+                            <input class="form-check-input" type="radio" name="type" id="gridRadios4"
                                 value="Individual">
                             <label class="form-check-label" for="gridRadios4">
                                 Individual
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5"
+                            <input class="form-check-input" type="radio" name="type" id="gridRadios5"
                                 value="Company">
                             <label class="form-check-label" for="gridRadios5">
                                 Company
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios6"
+                            <input class="form-check-input" type="radio" name="type" id="gridRadios6"
                                 value="Joint Holder">
                             <label class="form-check-label" for="gridRadios6">
                                 Joint Holder
@@ -135,20 +135,20 @@
                             <label for="inputCDBL"
                                 class="col-form-label col-sm-8 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">CDBL
                                 Participant ID</label>
-                            <input type="text" class="form-control" id="inputCDBL">
+                            <input type="text" class="form-control" name="CDBL_id" id="inputCDBL">
                         </div>
                         <div class="form-group col-md-4 ">
                             <label for="inputBO"
                                 class="col-form-label col-sm-10 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">BO
                                 ID</label>
-                            <input type="text" class="form-control" id="inputBO">
-
+                            <input type="text" class="form-control" name="BO_id" id="inputBO">
+    
                         </div>
                         <div class="form-group col-md-3 ">
                             <label for="inputDAO"
                                 class="col-form-label col-sm-12 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">Date
                                 Account Opened</label>
-                            <input type="date" class="form-control" id="inputDAO">
+                            <input type="date" class="form-control" name="acc_open_date" id="inputDAO">
                         </div>
                     </div>
                 </div><br>
@@ -162,7 +162,7 @@
                 <div class="border border-success m-2 mt-4">
                     <div class="col form-inline m-2 mt-4">
                         <label class=" ml-2 mr-1 pl-1 pr-1 font-weight-bold">Name in Full of Account :</label>
-                        <input type="text" class="form-control" id="nameOfFullAcc" size="70">
+                        <input type="text" class="form-control" id="nameOfFullAcc" name="full_name" size="70">
                     </div>
                     <div class="form-row mt-4">
                         <div class="form-group col-md-7">
@@ -171,13 +171,13 @@
                                 Short Name of Account Holder (Insert full name starting with Title i.e.
                                 Mr./Mrs./Ms/Dr, abbreviate only if over
                                 30 characters)</label>
-                            <input type="text" class="form-control" id="inputNameOfAcc">
+                            <input type="text" class="form-control" id="inputNameOfAcc" name="short_name">
                         </div>
                         <div class="form-group col-md-4 ">
                             <label for="inputBO"
                                 class="col-form-label col-sm-4 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">Title
                                 (i.e. Mr./Mrs./Ms)</label>
-                            <input type="text" class="form-control" id="inputTitle">
+                            <input type="text" class="form-control" id="inputTitle" name="title">
                         </div>
                     </div>
                     <div class="form1">
@@ -186,7 +186,7 @@
                                 Company/Firm/Statutory
                                 Body)
                                 name of Contact Person :</label>
-                            <input type="text" class="form-control" id="nameOfContractPerson">
+                            <input type="text" class="form-control" id="nameOfContractPerson" name="cp_name">
                         </div>
                     </div><br>
                     <fieldset class="form-group row ml-2 mr-2 p-2 ">
@@ -195,14 +195,14 @@
                             Case of Individual :</legend>
                         <div class="col-sm-15">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input " type="radio" name="gridRadios" id="gridRadios1"
+                                <input class="form-check-input " type="radio" name="gender" id="gridRadios1"
                                     value="Male">
                                 <label class="form-check-label" for="gridRadios1">
                                     Male
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                <input class="form-check-input" type="radio" name="gender" id="gridRadios2"
                                     value="Female">
                                 <label class="form-check-label" for="gridRadios2">
                                     Female
@@ -211,19 +211,19 @@
                         </div>
                         <div class="col form-inline">
                             <label class=" ml-3 mr-1 pl-3 pr-1 font-weight-bold">Occupation :</label>
-                            <input type="text" class="form-control" id="occupation">
+                            <input type="text" class="form-control" id="occupation" name="occupation">
                         </div>
                     </fieldset>
                     <div class="col form-inline">
                         <label class=" ml-3 mr-1 pl-3 pr-1 font-weight-bold">Father's / Husband's Name :</label>
-                        <input type="text" class="form-control" id="occupation">
+                        <input type="text" class="form-control" id="occupation" name="f_name">
                     </div><br>
                     <div class="col form-inline">
                         <label class=" ml-3 mr-1 pl-3 pr-1 font-weight-bold">Mother's Name :</label>
-                        <input type="text" class="form-control" id="occupation">
+                        <input type="text" class="form-control" id="occupation" name="m_name">
                     </div><br>
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -235,59 +235,59 @@
                     <div class="form1 mt-4">
                         <div class="col form-inline">
                             <label class=" ml-3 mr-1 pl-3 pr-1 font-weight-bold">Address :</label>
-                            <input type="text" class="form-control" id="nameOfContractPerson">
+                            <input type="text" class="form-control" id="nameOfContractPerson" name="address">
                         </div>
                     </div><br>
                     <div class="form-row mt-4 ">
                         <div class="form-group col-md-3 mr-3">
                             <label for="inputCity"
                                 class="col-form-label col-sm-10 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">City</label>
-                            <input type="text" class="form-control" id="inputCity">
+                            <input type="text" class="form-control" id="inputCity" name="city">
                         </div>
                         <div class="form-group col-md-3 mr-3">
                             <label for="inputPostCode"
                                 class="col-form-label col-sm-10 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">Post
                                 Code</label>
-                            <input type="text" class="form-control" id="inputPostCode">
+                            <input type="text" class="form-control" id="inputPostCode" name="post_code">
                         </div>
                         <div class="form-group col-md-3 mr-3 ">
                             <label for="inputState"
                                 class="col-form-label col-sm-10 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">State/Division</label>
-                            <input type="text" class="form-control" id="inputState">
+                            <input type="text" class="form-control" id="inputState" name="state">
                         </div>
                     </div>
                     <div class="form-row mt-4 ">
                         <div class="form-group col-md-3 mr-3">
                             <label for="inputCountry"
                                 class="col-form-label col-sm-10 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">Country</label>
-                            <input type="text" class="form-control" id="inputCountry">
+                            <input type="text" class="form-control" id="inputCountry" name="country">
                         </div>
                         <div class="form-group col-md-3 mr-3">
                             <label for="inputTelephone"
                                 class="col-form-label col-sm-10 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">Telephone</label>
-                            <input type="text" class="form-control" id="inputTelephone">
+                            <input type="text" class="form-control" name="telephone" id="inputTelephone">
                         </div>
                         <div class="form-group col-md-3 mr-3 ">
                             <label for="inputMoblephone"
                                 class="col-form-label col-sm-10 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">Mobile
                                 Phone</label>
-                            <input type="text" class="form-control" id="inputMoblephone">
+                            <input type="text" class="form-control" id="inputMoblephone" name="phone">
                         </div>
                     </div>
                     <div class="form-row mt-4 ">
                         <div class="form-group col-md-3 mr-3">
                             <label for="inputFax"
                                 class="col-form-label col-sm-10 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">Fax</label>
-                            <input type="text" class="form-control" id="inputFax">
+                            <input type="text" class="form-control" id="inputFax" name="fax">
                         </div>
                         <div class="form-group col-md-3 mr-3">
                             <label for="inputEmail"
                                 class="col-form-label col-sm-10 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">Email</label>
-                            <input type="text" class="form-control" id="inputEmail" placeholder="abc@demo.com">
+                            <input type="text" class="form-control" id="inputEmail" name="email" placeholder="abc@demo.com">
                         </div>
                     </div><br>
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -299,26 +299,26 @@
                     <div class="row m-2 mt-4">
                         <div class="col form-inline">
                             <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Passport No :</label>
-                            <input type="text" class="form-control" id="passportNo">
+                            <input type="text" class="form-control" id="passportNo" name="pass_name">
                         </div>
                         <div class="col form-inline">
                             <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Issue Place :</label>
-                            <input type="text" class="form-control" id="issuePlace">
+                            <input type="text" class="form-control" id="issuePlace" name="issue_place">
                         </div>
                     </div><br>
                     <div class="row m-2 mt-4">
                         <div class="col form-inline">
                             <label class="ml=8 ml-4 mr-3pl-3 pr-3 font-weight-bold">Issue Date :</label>
-                            <input type="date" class="form-control" id="issueDate">
+                            <input type="date" class="form-control" id="issueDate" name="issue_date">
                         </div>
                         <div class="col form-inline">
                             <label class="ml=8 mr-3pl-3 pr-3 font-weight-bold">Expiry Date :</label>
-                            <input type="date" class="form-control" id="expiryDate">
+                            <input type="date" class="form-control" id="expiryDate" name="expiry_date">
                         </div>
                     </div><br>
-
+    
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -326,26 +326,26 @@
                     <h5>4. Bank Details</h5>
                 </div>
                 <!-- -----------form code starts from here  ---------------->
-
+    
                 <div class="border border-success m-2 mt-4">
                     <div class="row m-2 mt-4">
                         <div class="col form-inline">
                             <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Bank Name :</label>
-                            <input type="text" class="form-control" id="bankName">
+                            <input type="text" class="form-control" id="bankName" name="bank_name">
                         </div>
                         <div class="col form-inline">
                             <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Branch Name :</label>
-                            <input type="text" class="form-control" id="branchName">
+                            <input type="text" class="form-control" id="branchName" name="branch_name">
                         </div>
                     </div><br>
                     <div class="row m-2 mt-4">
                         <div class="col form-inline">
                             <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Account No :</label>
-                            <input type="text" class="form-control" id="accountNo">
+                            <input type="text" class="form-control" id="accountNo" name="acc_no">
                         </div>
                         <div class="col form-inline">
                             <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Routing No :</label>
-                            <input type="text" class="form-control" id="routingNo">
+                            <input type="text" class="form-control" id="routingNo" name="routing_number">
                         </div>
                     </div><br>
                     <fieldset class="form-group row ml-2 mr-2 p-2 ">
@@ -353,13 +353,13 @@
                             Electronic Dividend Credit :</legend>
                         <div class="col-sm-15">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="Yes" id="Check1">
+                                <input class="form-check-input" type="checkbox" value="Yes" id="Check1" name="edc_type">
                                 <label class="form-check-label" for="Check1">
                                     Yes
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="No" id="Check2">
+                                <input class="form-check-input" type="checkbox" value="No" id="Check2" name="edc_type">
                                 <label class="form-check-label" for="Check2">
                                     No
                                 </label>
@@ -369,13 +369,13 @@
                             Tax Exemption if any :</legend>
                         <div class="col-sm-15">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="Yes" id="Check3">
+                                <input class="form-check-input" type="checkbox" name="tax_exe" value="Yes" id="Check3">
                                 <label class="form-check-label" for="Check3">
                                     Yes
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="No" id="Check4">
+                                <input class="form-check-input" type="checkbox" name="tax_exe" value="No" id="Check4">
                                 <label class="form-check-label" for="Check4">
                                     No
                                 </label>
@@ -385,12 +385,12 @@
                     <div class="row m-2 mt-4">
                         <div class="col form-inline">
                             <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Tin/TAX ID :</label>
-                            <input type="text" class="form-control" id="taxId">
+                            <input type="text" class="form-control" id="taxId" name="tax_id">
                         </div>
                     </div><br>
-
+    
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -398,20 +398,20 @@
                     <h5>5. Others Information</h5>
                 </div>
                 <!-- -----------form code starts from here  ---------------->
-
+    
                 <div class="border border-success m-2 mt-4">
                     <fieldset class="form-group row ml-2 mr-2 p-2 mt-4 ">
                         <legend class="col-form-label col-sm-4 float-sm-left pt-0 ml-3 mr-1 pl-4 pr-1 font-weight-bold">
                             Residency :</legend>
                         <div class="col-sm-15">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="Residen" id="Check7">
+                                <input class="form-check-input" type="checkbox" value="Residen" id="Check7" name="residency">
                                 <label class="form-check-label" for="Check7">
                                     Residen
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="Non Residen" id="Check8">
+                                <input class="form-check-input" type="checkbox" value="Non Residen" id="Check8" name="residency">
                                 <label class="form-check-label" for="Check8">
                                     Non Residen
                                 </label>
@@ -419,70 +419,70 @@
                         </div>
                         <div class="col form-inline">
                             <label class=" ml-2 mr-1 pl-1 pr-1 font-weight-bold">Nationality :</label>
-                            <input type="text" class="form-control" id="nationality">
+                            <input type="text" class="form-control" id="nationality" name="r_nationality">
                         </div>
                     </fieldset>
                     <div class="col form-inline">
                         <label class="ml=10 ml-4 mr-3pl-3 pl-3 pr-3 font-weight-bold">Date of Birth :</label>
-                        <input type="date" class="form-control" id="DOB">
+                        <input type="date" class="form-control" id="DOB" name="dob">
                     </div>
                     <fieldset class="form-group row ml-1 mr-2 p-2 mt-4 ">
                         <legend class="col-form-label col-sm-3 float-sm-left pt-4 ml-3 mr-1 pl-4 pr-1 font-weight-bold">
                             Statement Cycle Code :</legend>
-
+    
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" value="Daily" id="Check9">
+                            <input class="form-check-input" type="checkbox" name="scc_type" value="Daily" id="Check9">
                             <label class="form-check-label" for="Check9">
                                 Daily
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" value="Weekly" id="Check10">
+                            <input class="form-check-input" type="checkbox" name="scc_type" value="Weekly" id="Check10">
                             <label class="form-check-label" for="Check10">
                                 Weekly
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" value="Fortnightly" id="Check11">
+                            <input class="form-check-input" type="checkbox" name="scc_type" value="Fortnightly" id="Check11">
                             <label class="form-check-label" for="Check11">
                                 Fortnightly
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" value="Monthly" id="Check12">
+                            <input class="form-check-input" type="checkbox" name="scc_type" value="Monthly" id="Check12">
                             <label class="form-check-label" for="Check12">
                                 Monthly
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" value="Other" id="Check13">
+                            <input class="form-check-input" type="checkbox" name="scc_type" value="Other" id="Check13">
                             <label class="form-check-label" for="Check13">
                                 Other (Please Specify)
                             </label>
-                            <input type="text" class="form-control" id="others" size="10">
+                            <input type="text" class="form-control" id="others" name="other" size="10">
                         </div>
                     </fieldset>
                     <div class="col form-inline">
                         <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Internal Ref. No (To be filled in by
                             CDBL
                             Partic) :</label>
-                        <input type="text" class="form-control" id="application" size="50">
+                        <input type="text" class="form-control" id="application" name="ref_no" size="50">
                     </div><br>
                     <div class="col form-inline">
                         <label class="ml=10 ml-4 mr-3pl-3 pl-3 pr-3 font-weight-bold">Date of Registration :</label>
-                        <input type="date" class="form-control" id="dateOfReg">
+                        <input type="date" class="form-control" id="dateOfReg" name="dor">
                     </div><br>
                     <div class="col form-inline">
                         <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">In case of Company :</label>
-                        <input type="text" class="form-control" id="inCase" size="50">
+                        <input type="text" class="form-control" id="inCase" size="50" name="case_company">
                     </div><br>
                     <div class="col form-inline">
                         <label class=" ml-3 mr-1 pl-3 pr-3 font-weight-bold">Registration No :</label>
-                        <input type="text" class="form-control" id="regNo" size="70">
+                        <input type="text" class="form-control" id="regNo" size="70" name="reg_no">
                     </div><br>
-
+    
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -493,7 +493,7 @@
                 <div class="border border-success m-2 mt-4">
                     <div class="col form-inline m-2 mt-4">
                         <label class=" ml-2 mr-1 pl-1 pr-1 font-weight-bold">Name in Full :</label>
-                        <input type="text" class="form-control" id="nameOfJFullAcc" size="70">
+                        <input type="text" class="form-control" id="nameOfJFullAcc" name="j_full_name" size="70">
                     </div>
                     <div class="form-row mt-4">
                         <div class="form-group col-md-7">
@@ -502,17 +502,17 @@
                                 Short Name of Account Holder (Insert full name starting with Title i.e.
                                 Mr./Mrs./Ms/Dr, abbreviate only if over
                                 30 characters)</label>
-                            <input type="text" class="form-control" id="inputNameOfJAcc">
+                            <input type="text" class="form-control" name="j_short_name" id="inputNameOfJAcc">
                         </div>
                         <div class="form-group col-md-4 ">
                             <label for="inputBO"
                                 class="col-form-label col-sm-4 float-sm-left pt-0 ml-3 mr-3 pl-4 pr-3 font-weight-bold">Title
                                 (i.e. Mr./Mrs./Ms)</label>
-                            <input type="text" class="form-control" id="inputJTitle">
+                            <input type="text" class="form-control" name="j_titles" id="inputJTitle">
                         </div>
                     </div>
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -526,13 +526,13 @@
                             Would you like to create a link to your existing Depository Account :</legend>
                         <div class="col-sm-15">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="Yes" id="Check14">
+                                <input class="form-check-input" type="checkbox" name="depository" value="Yes" id="Check14">
                                 <label class="form-check-label" for="Check14">
                                     Yes
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="No" id="Check15">
+                                <input class="form-check-input" type="checkbox" name="depository" value="No" id="Check15">
                                 <label class="form-check-label" for="Check15">
                                     No
                                 </label>
@@ -544,18 +544,20 @@
                             Depository
                             BO
                             Account Code (8 Digits) :</label>
-                        <input type="text" class="form-control" id="DBOAcc" size="40">
+                        <input type="text" class="form-control" name="d_bo_code" id="DBOAcc" size="40">
                     </div>
                     <br>
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
+    
+            
             <div class="form0">
                 <div class="p-3 mb-2 bg-warning text-white text-left font-weight-bold">
                     <h5>8. Nominees/Heirs</h5>
                 </div>
-                <!-- -----------form code starts from here  ---------------->
+                <!-----------form code starts from here  ---------------->
                 <div class="border border-success m-2 mt-4">
                     <p class="text-left pl-4 pr-2 m-2 mt-4">If account holder(s) wish to continue nominate person(s)
                         who
@@ -571,9 +573,9 @@
                         also
                         to
                         be provided.</p><br>
-
+    
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -589,11 +591,15 @@
                         signed by all account holders giving the name, contact details etc. of the POA holder and a
                         POA
                         document lodged with the form.</p><br>
-
+    
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
+    
+            -->
+    
+            
             <div class="form0">
                 <div class="p-3 mb-2 bg-warning text-white text-left font-weight-bold">
                     <h5>10. To be filled in by the Stock Broker/Stock Exchange in case the application is for opening a
@@ -604,32 +610,32 @@
                 <div class="border border-success m-2 mt-4">
                     <fieldset class="form-group row ml-2 mr-2 p-2 mt-4 ">
                         <legend class="col-form-label col-sm-2 float-sm-left pt-2 ml-2 mr-1 pl-2 pr-1 font-weight-bold">
-                            Exchange Nam :</legend>
+                            Exchange Name :</legend>
                         <div class="col-sm-30 ">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="Yes" id="Check16">
+                                <input class="form-check-input" type="checkbox" name="exchange_type" value="Yes" id="Check16">
                                 <label class="form-check-label" for="Check16">
                                     Yes
                                 </label>
                                 <div class="form-inline mr-4">
                                     <label class=" ml-2 mr-1 pl-2 pr-1 font-weight-bold ">Trading Id :</label>
-                                    <input type="text" class="form-control" id="tradingId1" size="15">
+                                    <input type="text" class="form-control" id="tradingId1" name="t_id" size="15">
                                 </div>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="No" id="Check15">
+                                <input class="form-check-input" type="checkbox" name="exchange_type" value="No" id="Check15">
                                 <label class="form-check-label" for="Check15">
                                     No
                                 </label>
                                 <div class="form-inline mr-4">
                                     <label class=" ml-2 mr-1 pl-2 pr-1 font-weight-bold">Trading Id :</label>
-                                    <input type="text" class="form-control" id="tradingId2" size="15">
+                                    <input type="text" class="form-control" id="tradingId2" name="t_id" size="15">
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -643,26 +649,26 @@
                             <div class="form-group ml-5 col-sm-3">
                                 <label for="img1stApp">1st Applicant or Authorized
                                     Signatory in case of Ltd. Co.</label>
-                                <input type="file" class="form-control-file" id="img1stApp">
+                                <input type="file" class="form-control-file" name="applicant1" id="applicant1">
                             </div>
-
+    
                             <div class="form-group ml-5 col-sm-3">
                                 <label for="img2ndApp">2nd Applicant or Authorized
                                     Signatory in case of Ltd. Co.</label>
-                                <input type="file" class="form-control-file" id="img2ndApp">
+                                <input type="file" class="form-control-file" name="applicant2" id="applicant1">
                             </div>
-
+    
                             <div class="form-group ml-5 col-sm-3">
                                 <label for="img3rdApp">Authorized Signatory in case
                                     of Ltd. Co.</label>
-                                <input type="file" class="form-control-file" id="img3rdApp">
+                                <input type="file" class="form-control-file" name="applicant3" id="applicant1">
                             </div>
                         </div>
-
+    
                     </div>
                 </div><br>
-
-
+    
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -677,20 +683,20 @@
                         </legend>
                         <div class="col-sm-30  mt-2">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="Yes" id="Check20">
+                                <input class="form-check-input" type="checkbox" name="delivary_type" value="Yes" id="Check20">
                                 <label class="form-check-label" for="Check20">
                                     Yes
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="No" id="Check21">
+                                <input class="form-check-input" type="checkbox" name="delivary_type" value="No" id="Check21">
                                 <label class="form-check-label" for="Check21">
                                     No
                                 </label>
                             </div>
                     </fieldset>
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -724,28 +730,28 @@
                             <tbody>
                                 <tr>
                                     <td>First Applicant</td>
-                                    <td><input type="text" class="form-control form13 f13" id="application"></td>
-                                    <td><input type="date" class="form-control form13 dateF13" id="application">
+                                    <td><input type="text" class="form-control form13 f13" name="fa_name" id="application"></td>
+                                    <td><input type="date" class="form-control form13 dateF13" name="fa_date" id="application">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Second Applicant</td>
-                                    <td><input type="text" class="form-control form13 f13" id="application"></td>
-                                    <td><input type="date" class="form-control form13 dateF13" id="application">
+                                    <td><input type="text" class="form-control form13 f13" name="sa_name" id="application"></td>
+                                    <td><input type="date" class="form-control form13 dateF13" name="sa_date" id="application">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>3rd Signatory ( Ltd Co. Only)</td>
-                                    <td><input type="text" class="form-control form13 f13" id="application"></td>
-                                    <td><input type="date" class="form-control form13 dateF13" id="application">
+                                    <td><input type="text" class="form-control form13 f13" name="s_name" id="application"></td>
+                                    <td><input type="date" class="form-control form13 dateF13" name="s_date" id="application">
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-
+    
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -757,20 +763,20 @@
                     <div class="form-group row ml-3 mr-6 p-2 mt-2">
                         <div class="m-2 mt-4 p-2">
                             <div class="form-check form-check-inline mr-4 m-2 p-4">
-                                <input class="form-check-input" type="checkbox" value="Either or Survivor" id="Check31">
+                                <input class="form-check-input" type="checkbox" name="sjc" value="Either or Survivor" id="Check31">
                                 <label class="form-check-label" for="Check31">
                                     Either or Survivor
                                 </label>
                             </div>
                             <div class="form-check form-check-inline mr-4 m-2 p-4">
-                                <input class="form-check-input" type="checkbox" value="Any one can Operate"
+                                <input class="form-check-input" type="checkbox" name="sjc" value="Any one can Operate"
                                     id="Check32">
                                 <label class="form-check-label" for="Check32">
                                     Any one can Operate
                                 </label>
                             </div>
                             <div class="form-check form-check-inline mr-4 m-2 p-4">
-                                <input class="form-check-input" type="checkbox" value="Any two will operate jointly"
+                                <input class="form-check-input" type="checkbox" name="sjc" value="Any two will operate jointly"
                                     id="Check33">
                                 <label class="form-check-label" for="Check33">
                                     Any two will operate jointly
@@ -779,15 +785,15 @@
                         </div>
                     </div>
                     <div class="form-check form-check-inline m-2 mb-4 p-2 ml-5">
-                        <input class="form-check-input" type="checkbox" value="others" id="Check34">
+                        <input class="form-check-input" type="checkbox" name="sjc" value="others" id="Check34">
                         <label class="form-check-label  col-sm-6" for="Check34">
                             Account will be operated by
                         </label>
-                        <input type="text" class="form-control" id="others" size="40">
+                        <input type="text" class="form-control" name="opprate_by" id="others" size="40">
                     </div>
                     <p class="pText">with any one of the others.</p><br>
                 </div><br>
-
+    
                 <!-- -----------form code ends from here  ---------------->
             </div>
             <div class="form0">
@@ -802,26 +808,31 @@
                         <br>
                         <p class="form15  ">I confirm the identity, occupation and address of the applicant(s) </p>
                         <br>
-
+    
                         <div class="col form-inline ml-4">
                             <label class=" form-inline font-weight-bold">Introducer Name</label>
-                            <input type="text" class="form-control" id="IName" size="30">
+                            <input type="text" class="form-control" id="IName" name="i_name" size="30">
                         </div>
                         <div class="form-group m-2 ml-5">
                             <label for="PicOfInt">(Picture of Introducer)</label>
-                            <input type="file" class="form-control-file" id="PicOfInt">
+                            <input type="file" class="form-control-file" name="i_pic" id="PicOfInt">
                         </div>
                         <div class="col form-inline m-3 ml-4">
                             <label class=" form-inline font-weight-bold">Account ID</label>
-                            <input type="text" class="form-control" id="AccID" size="30">
+                            <input type="text" class="form-control" name="i_acc_id" id="AccID" size="30">
                         </div>
                     </div>
-
+    
                 </div><br>
-
-                <a href="BO Accounts.html"><button type="submit"
+    
+            
+                     <a href="BO Accounts.html"><button type="submit"
                         class="btn btn-outline-success next">SUBMIT</button></a>
-
+            
+    
+                
+    
+                       
                 <!-- -----------form code ends from here  ---------------->
             </div>
         </form>

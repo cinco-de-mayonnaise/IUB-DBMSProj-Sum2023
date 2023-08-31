@@ -36,43 +36,18 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">first name</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <label class="label">User Name</label>
+                                    <input class="input--style-4" type="text" name="user_name">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">last name</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <label class="label">Password</label>
+                                    <input class="input--style-4" type="text" name="password">
                                 </div>
                             </div>
                         </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Birthday</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Gender</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
@@ -85,6 +60,18 @@
                                     <label class="label">Phone Number</label>
                                     <input class="input--style-4" type="text" name="phone">
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                            <select class="form-select" name="aType" aria-label="select example">
+                                <option selected>Select Account Type</option>
+                                <option value="1">Customer</option>
+                                <option value="2">HeadOfSettlement</option>
+                                <option value="3">RelationShip Manager</option>
+                                <option value="3">Admin</option>
+                              </select>
                             </div>
                         </div>
                         <!-- <div class="input-group">

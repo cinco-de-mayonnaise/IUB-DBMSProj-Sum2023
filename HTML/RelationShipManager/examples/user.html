@@ -143,6 +143,17 @@
           </div>
         </div>
       </nav>
+      <?php if (isset($error)) { ?>
+      <p>Error:
+        <?php echo $error; ?>
+      </p>
+      <?php } ?>
+
+      <?php if (isset($success)) { ?>
+      <p>
+        <?php echo $success; ?>
+      </p>
+      <?php } ?>
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
@@ -154,7 +165,7 @@
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body">
-                  <form>
+                  <form action="userconnect.php" method="POST">
                     <div class="row">
                       <div class="col-md-5">
                         <div class="form-group">
@@ -165,19 +176,19 @@
                       <div class="col-md-5">
                         <div class="form-group">
                           <label class="bmd-label-floating">Branch</label>
-                          <input type="text" class="form-control" id="br">
+                          <input type="text" class="form-control" id="br" name="Branch">
                         </div>
                       </div>
                       <div class="col-md-7">
                         <div class="form-group">
                           <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control" id="un">
+                          <input type="text" class="form-control" id="un" name="Username">
                         </div>
                       </div>
                       <div class="col-md-7">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control" id="ea">
+                          <input type="email" class="form-control" id="ea" name="Email_Address">
                         </div>
                       </div>
                     </div>
@@ -185,13 +196,13 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">First Name</label>
-                          <input type="text" class="form-control" id="fn">
+                          <input type="text" class="form-control" id="fn" name="first_name">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Last Name</label>
-                          <input type="text" class="form-control" id="ln">
+                          <input type="text" class="form-control" id="ln" name="last_name">
                         </div>
                       </div>
                     </div>
@@ -199,7 +210,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Address</label>
-                          <input type="text" class="form-control" id="ad">
+                          <input type="text" class="form-control" id="ad" name="address">
                         </div>
                       </div>
                     </div>
@@ -207,19 +218,19 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">City</label>
-                          <input type="text" class="form-control" id="city">
+                          <input type="text" class="form-control" id="city" name="city">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Country</label>
-                          <input type="text" class="form-control" id="country">
+                          <input type="text" class="form-control" id="country" name="country">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Postal Code</label>
-                          <input type="text" class="form-control" id="pcode">
+                          <input type="text" class="form-control" id="pcode" name="Postal_Code">
                         </div>
                       </div>
                     </div>
@@ -229,7 +240,7 @@
                           <label>About Me</label>
                           <div class="form-group">
                             <label class="bmd-label-floating"></label>
-                            <textarea class="form-control" rows="5" id="am"></textarea>
+                            <textarea class="form-control" rows="5" id="am" name="About"></textarea>
                           </div>
                         </div>
                       </div>
