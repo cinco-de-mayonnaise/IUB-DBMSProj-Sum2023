@@ -52,18 +52,18 @@
         </ul>
         
       </div>
-  </nav>
+    </nav>
     
     <!-- -----------navbar code ends here  ---------------->
     <br>
     <!-- -----------form code starts from here  ---------------->
-    <form class="container bg-light p-4" id="card" id="form01Title">
+    <form action="process-form.php" class="container bg-light p-4" id="card" id="form01Title">
         <h3 class="text-center bg-warning p-2 shadow" id="form01Title">CUSTOMER ACCOUNT INFORMATION FORM</h3>
         <div class="form-group">
             <label for="inputState">Account Type</label>
-            <select id="inputState" class="form-control">
-              <option selected>Cash</option>
-              <option>Margin</option>
+            <select id="inputState" name ="accType" class="form-control">
+              <option value="1" selected>Cash</option>
+              <option value="2">Margin</option>
             </select>
         </div>
         
@@ -72,15 +72,15 @@
         <div class="form-row">
             <div class="form-group col-md-4">
               <label for="inputDate">Date</label>
-              <input type="date" class="form-control" id="inputDate" >
+              <input type="date" name="date" class="form-control" id="inputDate" >
             </div>
             <div class="form-group col-md-4">
               <label for="inputClientCode">Client Code</label>
-              <input type="text" class="form-control" id="inputClientCode" placeholder="Enter Client Code">
+              <input type="text" name="clientCode" class="form-control" id="inputClientCode" placeholder="Enter Client Code">
             </div>
             <div class="form-group col-md-4">
                 <label for="inputLinkCode">Link Code</label>
-                <input type="text" class="form-control" id="inputLinkCode" placeholder="Enter Link Code">
+                <input type="text"  name="linkCode" class="form-control" id="inputLinkCode" placeholder="Enter Link Code">
             </div>
         </div>
 
@@ -96,17 +96,17 @@
         <div class="form-row" id="card" id="fAccountant">
             <h5 class="form-group col-md-12">First Account Holder</h5>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="fAccountantName" placeholder="Name of the Customer">
+              <input type="text" name="fAccountName"class="form-control" id="fAccountantName" placeholder="Name of the Customer">
             </div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="fAccountant-F/H-Name" placeholder="Father's/Husband's Name">
+              <input type="text" name="fAccountFHName" class="form-control" id="fAccountant-F/H-Name" placeholder="Father's/Husband's Name">
             </div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="fAccountantMotherName" placeholder="Mother's Name">
+              <input type="text" name="fAccountMName" class="form-control" id="fAccountantMotherName" placeholder="Mother's Name">
             </div>
             <div class="form-group col-md-4">
               <label for="inputDate">Date Of Birth</label>
-              <input type="date" class="form-control" id="fDob" >
+              <input type="date" name="fDob" class="form-control" id="fDob" >
             </div>
             &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
             <div class="form-check form-check-inline">
@@ -121,40 +121,40 @@
             &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 
             <div class="form-group col-md-4">
               <label for="fNationality"></label>
-              <input type="text" class="form-control" id="fNationality" placeholder="Enter Nationality" >
+              <input type="text" name="fNationality"class="form-control" id="fNationality" placeholder="Enter Nationality" >
             </div>
             <div class="form-group col-md-4">
               
-              <input type="text" class="form-control" id="fPreAddress" placeholder="Present Address" >
+              <input type="text" name="fPreAddress" class="form-control" id="fPreAddress" placeholder="Present Address" >
             </div>
             <div class="form-group col-md-4">
               
-              <input type="tel" class="form-control" id="fPreMobile" placeholder="Mobile Number" >
+              <input type="tel" name="fPreMobile" class="form-control" id="fPreMobile" placeholder="Mobile Number" >
             </div>
             <div class="form-group col-md-4">
               
-              <input type="tel" class="form-control" id="fPreTel" placeholder="Tel Number#" >
+              <input type="tel" name="fPreTel" class="form-control" id="fPreTel" placeholder="Tel Number#" >
             </div>
             <div class="form-group col-md-4">
               
-              <input type="text" class="form-control" id="fPerAddress" placeholder="Permenant Address" >
+              <input type="text" name="fPerAddress" class="form-control" id="fPerAddress" placeholder="Permenant Address" >
             </div>
             
             <div class="form-group col-md-4">
               
-              <input type="tel" class="form-control" id="fPerTel" placeholder="Tel Number#" >
+              <input type="tel" name="fPerTel" class="form-control" id="fPerTel" placeholder="Tel Number#" >
             </div>
             <div class="form-group col-md-4">
               
-              <input type="text" class="form-control" id="fPerEmail" placeholder="E-Mail ID" >
+              <input type="text" name="fPerEmail" class="form-control" id="fPerEmail" placeholder="E-Mail ID" >
             </div>
             <div class="form-group col-md-4">
               
-              <input type="text" class="form-control" id="fOccupation" placeholder="Occupation" >
+              <input type="text" name="fOccupation" class="form-control" id="fOccupation" placeholder="Occupation" >
             </div>
             <div class="form-group col-md-4">
               
-              <input type="text" class="form-control" id="fE-Tin" placeholder="E-Tin#" >
+              <input type="text" name="fE-Tin" class="form-control" id="fE-Tin" placeholder="E-Tin#" >
             </div>
 
             
