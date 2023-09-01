@@ -9,11 +9,14 @@ All photos/signatures should be VARBINARY(2097152) (under 2 megabytes)
 
 Pattern for writing SQL code
 
+Table names should not be all caps since theyre not an SQL KEYWORD
+
 CREATE TABLE Name_First_Letters_Capital(
 	-- first all primary keys
 	-- then all data fields
 
-	-- then all constraints
+	-- then all constraints that don't require other tables (like CHECK)
+	NAME YOUR FREAKING CONSTRAINTS ALWAYS!!!
 
 );
 
