@@ -1,10 +1,11 @@
 Standard: All names should be VARCHAR(100)
+All
 All addresses should be VARCHAR(400)  
 All email addresses should be VARCHAR(100)
 All DOB should be DATE
 All nationality should be VARCHAR(20)
 All phone/telephone numbers should be VARCHAR(20)
-All photos/signatures should be VARBINARY(2097152) (under 2 megabytes)
+All photos/signatures should be LONGBLOB (under 2 megabytes)
 
 
 Pattern for writing SQL code
