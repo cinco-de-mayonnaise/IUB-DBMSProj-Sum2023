@@ -1,5 +1,5 @@
 CREATE TABLE Employee(
-	employeeID INT PRIMARY KEY,
+	employeeId INT PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
         gender VARCHAR(10), -- constraint: check 'male', 'female', 'others'
         dob DATE,
