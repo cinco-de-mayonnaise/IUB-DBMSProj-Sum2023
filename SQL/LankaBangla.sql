@@ -3,17 +3,31 @@
 ---
 --- This SQL script was generated automatically using HOSTS_concatenator made by AbdullahTrees!
 --- 
---- File created at 2023-08-31 22:43:24.986137
+--- File created at 2023-09-02 00:18:08.142873
 --- 
 --- Built using the following source files:
+--- 	=> preamble.sql
 --- 	=> boFormSql.txt
 --- 	=> CAI_sql.txt
 --- 	=> lbangla-sql-query-from-kyc-database.txt
+--- 	=> table_contactinfo.sql
+--- 	=> table_customerinfo.sql
+--- 	=> table_guardianinfo.sql
+--- 	=> table_introducerinfo.sql
 --- 	=> user-sql-query-from-kyc-database.txt
 --- 
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 
+
+
+------------------------------------
+---- Begin preamble.sql!
+-------------------------------
+
+-------------------------------
+---- preamble.sql ended here!
+------------------------------------
 
 
 ------------------------------------
@@ -173,6 +187,87 @@ CREATE TABLE `kyc` (
 )
 -------------------------------
 ---- lbangla-sql-query-from-kyc-database.txt ended here!
+------------------------------------
+
+
+------------------------------------
+---- Begin table_contactinfo.sql!
+-------------------------------
+CREATE TABLE Customer_Info(
+	contactID INT PRIMARY KEY,
+	presentAddress VARCHAR(400) NOT NULL,
+	permanentAddress VARCHAR(400),
+	mobileNumber VARCHAR(15) NOT NULL,
+	telephoneNumber VARCHAR(15),
+	email VARCHAR(50)
+);
+-------------------------------
+---- table_contactinfo.sql ended here!
+------------------------------------
+
+
+------------------------------------
+---- Begin table_customerinfo.sql!
+-------------------------------
+CREATE TABLE Customer_Info(
+	customerID INT PRIMARY KEY,
+	customerName VARCHAR(100) NOT NULL,
+	fatherName VARCHAR(100),
+	motherName VARCHAR(100),
+	husbandName VARCHAR(100),
+	dob DATE NOT NULL,
+	gender VARCHAR(10) -- constraint: check, male, female, OTHERS
+	nationality VARCHAR(20),
+	presentAddress VARCHAR(400) NOT NULL,
+	permanentAddress VARCHAR(400),
+	mobileNumber VARCHAR(15) NOT NULL,
+	telephoneNumber VARCHAR(15),
+	email VARCHAR(50),
+	occupation VARCHAR(50),
+	drivingLicenseNo VARCHAR(30),
+	signature VARBINARY(2097152) NOT NULL,
+	eTinID VARCHAR(50),
+	
+	
+);
+-------------------------------
+---- table_customerinfo.sql ended here!
+------------------------------------
+
+
+------------------------------------
+---- Begin table_guardianinfo.sql!
+-------------------------------
+CREATE TABLE Guardian_Info(
+	guardianID INT PRIMARY KEY,
+	name VARCHAR(100) NOT NULL,
+	shortName VARCHAR(50),
+	dob DATE NOT NULL,
+	relationshipWithMinor VARCHAR(20) -- maybe constraint: could be some strings like 'mother', 'father' or free.
+	passportInfoId VARCHAR(20), -- constraint: is a foreign key in passportinfo table
+	residencyID VARCHAR(20), -- constraint: is a foreign key somewhere (according to ERD)
+	signature VARBINARY(2097152) NOT NULL,
+	
+	
+);
+-------------------------------
+---- table_guardianinfo.sql ended here!
+------------------------------------
+
+
+------------------------------------
+---- Begin table_introducerinfo.sql!
+-------------------------------
+CREATE TABLE Introducer_Info(
+	introducerID INT PRIMARY KEY, -- constraint, introducer must have been a customer as well
+	introducerName VARCHAR(100) NOT NULL, -- constraint, introducer must have been a customer as well
+	introducerNumber VARCHAR(15), -- constraint, must be a mobile number with customerid.mobilenumber = introducernumber
+	email VARCHAR(50), -- same constraints as above, may be null
+	occupation VARCHAR(50), -- same constraints as above
+	
+);
+-------------------------------
+---- table_introducerinfo.sql ended here!
 ------------------------------------
 
 
