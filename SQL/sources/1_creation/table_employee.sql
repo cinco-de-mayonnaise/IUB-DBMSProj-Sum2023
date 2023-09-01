@@ -4,7 +4,7 @@ CREATE TABLE Employee(
         gender VARCHAR(10), -- constraint: check 'male', 'female', 'others'
         dob DATE,
         email VARCHAR(100),
-        contactId  int, -- constraint Contact_Info
+        contactId  int, -- constraint Foreign Key Contact_Info Table
         signature LONGBLOB,
         employeeType VARCHAR(100) -- constraint: check 'RM', 'Hos', 'A'
 	

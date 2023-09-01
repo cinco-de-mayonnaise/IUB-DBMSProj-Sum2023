@@ -1,5 +1,5 @@
 CREATE TABLE Passport_Info(
-	pCustomerId INT NOT NULL,
+	pCustomerId INTEGER NOT NULL,
 	passportNumber CHAR(10) NOT NULL,
 	issuePlace VARCHAR(100) NOT NULL,
 	issueDate VARCHAR(100) NOT NULL,
