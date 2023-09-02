@@ -85,23 +85,23 @@ def RecursivelyOpenEverything(inside):
     return
 
 def WriteFirstBanner(hosts_file):
-    first_banner = """------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
----
---- This SQL script was generated automatically using HOSTS_concatenator made by AbdullahTrees!
---- 
---- File created at %s
---- 
---- Built using the following source files:
+    first_banner = """-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- -
+-- - This SQL script was generated automatically using HOSTS_concatenator made by AbdullahTrees!
+-- - 
+-- - File created at %s
+-- - 
+-- - Built using the following source files:
 """ % (datetime.datetime.now())
 
     hosts_file.write(first_banner)
     for v in fc_list:
         hosts_file.write("--- \t=> %s\n" % (v[1]))
     
-    hosts_file.write("""--- 
-------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
+    hosts_file.write("""-- - 
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
 
 
 """)
@@ -110,15 +110,15 @@ def WriteFirstBanner(hosts_file):
 
 def WriteBorderBanner(filename, hosts_file, type):
     begin_banner = """
-------------------------------------
----- Begin %s!
--------------------------------
+-- ----------------------------------
+-- -- Begin %s!
+-- -----------------------------
 """ % (filename)
 
     end_banner = """
--------------------------------
----- %s ended here!
-------------------------------------
+-- -----------------------------
+-- -- %s ended here!
+-- ----------------------------------
 
 """ % (filename)
 

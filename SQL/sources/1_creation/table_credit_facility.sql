@@ -1,8 +1,7 @@
-create table credit_facility(
-        creNum varchar(20),
-    	name varchar(100),
-        recommendedBy varchar(100),
-    	approvedBy varchar(100),
-    	customerID int  -- constraint foeign key -> customer
-
+CREATE TABLE Credit_Facility(
+	creNum VARCHAR(20),
+	name VARCHAR(100),
+	recommendedBy VARCHAR(100),
+	approvedBy VARCHAR(100),
+	customerID INT  -- constraint foreign key -> customer
 );
