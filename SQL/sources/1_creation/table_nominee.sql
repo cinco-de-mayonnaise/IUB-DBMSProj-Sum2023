@@ -1,5 +1,5 @@
 CREATE TABLE Nominee(
-    nomineeId int,
+    nomineeId int PRIMARY KEY,
     percentage float,
     relationshipWcus varchar(50),
     name varchar(100),

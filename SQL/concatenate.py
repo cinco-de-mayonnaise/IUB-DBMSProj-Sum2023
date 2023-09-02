@@ -62,7 +62,8 @@ Please ensure all your SQL code exist in text files and are inside the 'sources'
         WriteBorderBanner(s[1], output_file, 'begin')
         output_file.write(s[0])
         WriteBorderBanner(s[1], output_file, 'end')
-
+    
+    output_file.flush()
     print("Done! Press Enter to exit.")
     input()
     return
@@ -97,7 +98,7 @@ def WriteFirstBanner(hosts_file):
 
     hosts_file.write(first_banner)
     for v in fc_list:
-        hosts_file.write("--- \t=> %s\n" % (v[1]))
+        hosts_file.write("-- - \t=> %s\n" % (v[1]))
     
     hosts_file.write("""-- - 
 -- ----------------------------------------------------------------------------------------------------

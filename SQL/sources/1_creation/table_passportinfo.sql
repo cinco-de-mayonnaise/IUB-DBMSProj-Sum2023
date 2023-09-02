@@ -5,5 +5,5 @@ CREATE TABLE Passport_Info(
 	issueDate VARCHAR(100) NOT NULL,
 	expiryDate VARCHAR(100) NOT NULL,
     
-    -- CONSTRAINT Passport_Info_PK PRIMARY KEY (pCustomerId, passportNumber)
+    CONSTRAINT Passport_Info_PK PRIMARY KEY (pCustomerId, passportNumber)
 );

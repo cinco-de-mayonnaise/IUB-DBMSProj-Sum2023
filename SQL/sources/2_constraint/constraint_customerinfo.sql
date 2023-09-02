@@ -1,2 +1,2 @@
-ALTER TABLE Customer_Info
-ADD CONSTRAINT FK_Customer_Info FOREIGN KEY (contactID) REFERENCES Contact_Info(contactID);
+ALTER TABLE customer_info
+ADD CONSTRAINT FK_Customer_Info FOREIGN KEY (contactID) REFERENCES contact_info(contactID);

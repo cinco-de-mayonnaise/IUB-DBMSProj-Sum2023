@@ -1,4 +1,4 @@
-CREATE TABLE contactInfo(
+CREATE TABLE contact_Info(
 	contactID INT PRIMARY KEY,
 	presentAddress VARCHAR(400) NOT NULL,
 	permanentAddress VARCHAR(400),

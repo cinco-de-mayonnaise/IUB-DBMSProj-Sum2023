@@ -1,7 +1,6 @@
-create table bo_account(
+create table BO_Account(
     
-    BOapplicationNo int,
-    
+    BOapplicationNo int PRIMARY KEY,
     boCategory varchar(20),
     boType varchar(20),
     accOpeningDate date,

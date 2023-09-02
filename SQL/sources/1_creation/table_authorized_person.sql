@@ -1,7 +1,7 @@
-create table AUTHORISED_PERSON(
+CREATE TABLE Authorised_Person(
     authoPerId int primary key,
     isShareHolderOfStock boolean,
-    signeture LONGBLOB,
+    signature LONGBLOB,
     ACcustomerId int  -- constraint foreign key ->customer
     
-    );
+);
