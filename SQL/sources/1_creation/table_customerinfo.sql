@@ -18,6 +18,9 @@ CREATE TABLE Customer_Info(
 	bankAccNo VARCHAR(30),
 	BOapplicationNo INT,
 	BONapplicationNo INT,
-	POAapplicationNo INT
+	POAapplicationNo INT,
 	-- nationality VARCHAR(20),
+	
+	
+	
 );

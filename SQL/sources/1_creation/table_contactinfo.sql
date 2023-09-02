@@ -4,11 +4,11 @@ CREATE TABLE contactInfo(
 	permanentAddress VARCHAR(400),
 	mobileNumber VARCHAR(20) NOT NULL,
 	city VARCHAR(20),
-	postcode VARCHAR(20),
-	state VARCHAR(20),
-	country VARCHAR(20),
-	fax VARCHAR(20),
-	email VARCHAR(100),
+	postcode varchar(20),
+	state varchar(20),
+	country varchar(20),
+	fax varchar(20),
+	email varchar(100),
 	telephoneNumber VARCHAR(20)
 
 );
