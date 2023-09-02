@@ -1,8 +1,5 @@
-create table boNomination(
-    BONapplicationNo int,
-    
-    guardianId int, -- constraint guardian 
-    nomineeId int -- constraint ->nominee
-    
-    
+CREATE TABLE BO_Nomination(
+	BONapplicationNo INT,
+	guardianId INT, -- constraint guardian 
+	nomineeId INT -- constraint ->nominee
 );
