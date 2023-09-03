@@ -7,4 +7,6 @@ CREATE TABLE Employee(
 	contactId INT, -- constraint Foreign Key Contact_Info Table
 	signature LONGBLOB,
 	employeeType VARCHAR(100) -- constraint: check 'RM', 'Hos', 'A'
+	
+	-- constraints implemented
 );

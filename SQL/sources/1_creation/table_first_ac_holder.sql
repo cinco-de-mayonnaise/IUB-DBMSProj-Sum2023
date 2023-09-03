@@ -3,4 +3,6 @@ CREATE TABLE First_AC_Holder(
 	boId INT,
 	
     CONSTRAINT First_AC_Holder_PK PRIMARY KEY (FcustomerId, boId)
+	
+	-- constraints implemented
 );

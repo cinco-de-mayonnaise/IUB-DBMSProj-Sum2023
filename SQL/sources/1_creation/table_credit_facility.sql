@@ -4,4 +4,6 @@ CREATE TABLE Credit_Facility(
 	recommendedBy VARCHAR(100),
 	approvedBy VARCHAR(100),
 	customerID INT  -- constraint foreign key -> customer
+	
+	-- constraints implemented
 );

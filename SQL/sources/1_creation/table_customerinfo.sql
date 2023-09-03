@@ -19,5 +19,7 @@ CREATE TABLE Customer_Info(
 	BOapplicationNo INT,
 	BONapplicationNo INT,
 	POAapplicationNo INT
-	-- nationality VARCHAR(20),
+	-- nationality VARCHAR(20)
+	
+	-- constraints implemented
 );

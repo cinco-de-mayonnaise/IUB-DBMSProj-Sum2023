@@ -7,4 +7,7 @@ CREATE TABLE Introducer_Info(
 	iNumber VARCHAR(20), -- constraint, must be a mobile number with customerid.mobilenumber = introducernumber
 	email VARCHAR(100), -- same constraints as above, may be null
 	occupation VARCHAR(50) -- same constraints as above
+	
+	
+	-- Not implemented as constraints not needed, ask Tabriji
 );

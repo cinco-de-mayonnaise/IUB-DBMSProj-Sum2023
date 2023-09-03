@@ -3,4 +3,6 @@ CREATE TABLE Joint_AC_Holder(
 	boId INT,
 	
 	CONSTRAINT Joint_AC_Holder_PK PRIMARY KEY (JcustomerId, boId)
+	
+	-- constraint implemented
 );
