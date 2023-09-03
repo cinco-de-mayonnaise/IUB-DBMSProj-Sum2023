@@ -3,7 +3,7 @@
 -- -
 -- - This SQL script was generated automatically using HOSTS_concatenator made by AbdullahTrees!
 -- - 
--- - File created at 2023-09-03 22:45:23.885897
+-- - File created at 2023-09-04 00:36:53.493314
 -- - 
 -- - Built using the following source files:
 -- - 	=> preamble.sql
@@ -47,6 +47,7 @@
 -- - 	=> constraint_joint_ac_holder.sql
 -- - 	=> constraint_passportinfo.sql
 -- - 	=> constraint_relationship_manager.sql
+-- - 	=> boo.txt
 -- - 	=> postamble.sql
 -- - 
 -- ----------------------------------------------------------------------------------------------------
@@ -692,6 +693,15 @@ ALTER TABLE relationship_manager
 ADD CONSTRAINT relationship_manager__FK_RMemployee FOREIGN KEY (RMemployeeID) REFERENCES employee(employeeID);
 -- -----------------------------
 -- -- constraint_relationship_manager.sql ended here!
+-- ----------------------------------
+
+
+-- ----------------------------------
+-- -- Begin boo.txt!
+-- -----------------------------
+-- test
+-- -----------------------------
+-- -- boo.txt ended here!
 -- ----------------------------------
 
 
