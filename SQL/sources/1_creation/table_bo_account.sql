@@ -7,4 +7,6 @@ create table BO_Account(
     customerId int ,-- constraint ->foreign key customer
     bankId int ,-- constraint->foreign key bank
     statementCycleType  varchar(25)
+	
+		-- constraints implemented
 );

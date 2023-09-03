@@ -3,4 +3,6 @@ CREATE TABLE Bank_Info (
 	routingNumber VARCHAR(20),
 	bankName VARCHAR(100),
 	branchName VARCHAR(100)
+	
+		-- constraints implemented
 );
