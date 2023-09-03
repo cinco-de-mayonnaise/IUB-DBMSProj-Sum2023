@@ -3,7 +3,7 @@
 -- -
 -- - This SQL script was generated automatically using HOSTS_concatenator made by AbdullahTrees!
 -- - 
--- - File created at 2023-09-03 20:13:34.080848
+-- - File created at 2023-09-03 22:45:23.885897
 -- - 
 -- - Built using the following source files:
 -- - 	=> preamble.sql
@@ -279,7 +279,7 @@ CREATE TABLE Customer_Info(
 	contactID INT, -- constraint: foreign key of contact_info
 	occupation VARCHAR(50),
 	drivingLicenseNo VARCHAR(30),
-	signature VARBINARY(2097152) NOT NULL,
+	signature LONGBLOB NOT NULL,
 	eTinID VARCHAR(50),
 	customerType VARCHAR(20), -- constraint(subentity specifier): check first_acc, joint_acc, corporate_client 
 	introducerID INT, -- constraint: foreign key of introducer_info
