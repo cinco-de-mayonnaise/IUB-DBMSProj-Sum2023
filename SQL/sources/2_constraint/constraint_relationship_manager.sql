@@ -1,2 +1,2 @@
 ALTER TABLE relationship_manager
-ADD CONSTRAINT FK_RMemployee FOREIGN KEY (RMemployeeID) REFERENCES employee(employeeID);
+ADD CONSTRAINT relationship_manager__FK_RMemployee FOREIGN KEY (RMemployeeID) REFERENCES employee(employeeID);

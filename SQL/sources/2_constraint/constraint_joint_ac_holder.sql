@@ -1,2 +1,2 @@
 ALTER TABLE Joint_AC_Holder
-ADD CONSTRAINT FK_Jcustomer FOREIGN KEY (JcustomerId) REFERENCES customer_info(customerID);
+ADD CONSTRAINT Joint_AC_Holder__FK_Jcustomer FOREIGN KEY (JcustomerId) REFERENCES customer_info(customerID);

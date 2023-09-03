@@ -5,7 +5,7 @@ create table BO_Account(
     boType varchar(20),
     accOpeningDate date,
     customerId int ,-- constraint ->foreign key customer
-    bankId int ,-- constraint->foreign key bank
+    bankId INT UNSIGNED,-- constraint->foreign key bank
     statementCycleType  varchar(25)
 	
 		-- constraints implemented

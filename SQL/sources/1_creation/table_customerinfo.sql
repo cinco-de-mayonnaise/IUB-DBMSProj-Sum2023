@@ -9,12 +9,12 @@ CREATE TABLE Customer_Info(
 	contactID INT, -- constraint: foreign key of contact_info
 	occupation VARCHAR(50),
 	drivingLicenseNo VARCHAR(30),
-	signature VARBINARY(2097152) NOT NULL,
+	signature LONGBLOB NOT NULL,
 	eTinID VARCHAR(50),
 	customerType VARCHAR(20), -- constraint(subentity specifier): check first_acc, joint_acc, corporate_client 
 	introducerID INT, -- constraint: foreign key of introducer_info
 	introducerContact VARCHAR(15), -- constraint: must exist in the same introducerID (NORMALIZATION: this field shouldnt exist because you can just get it from introducerID reeeeeeeee)	
-	bankID INT, -- constraint: foreign key of bank_info
+	bankID INT UNSIGNED, -- constraint: foreign key of bank_info
 	bankAccNo VARCHAR(30),
 	BOapplicationNo INT,
 	BONapplicationNo INT,

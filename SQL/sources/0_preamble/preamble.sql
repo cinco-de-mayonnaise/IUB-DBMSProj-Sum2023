@@ -8,6 +8,9 @@ START TRANSACTION;
 -- Drop existing tables for readdition
 -- DROP TABLE IF EXISTS Relationship_Manager, Poa_Info, Passport_Info, Nominee, KYC_Profile, Joint_AC_Holder, Introducer_Info, ... -- wait we dont have to write this by hand lmao
 
+SET FOREIGN_KEY_CHECKS=0;
+
+
 DROP TABLE IF EXISTS account,
 administrator,
 authorised_person,
@@ -31,3 +34,5 @@ nominee,
 passport_info,
 poa_info,
 relationship_manager;
+
+SET FOREIGN_KEY_CHECKS=1;

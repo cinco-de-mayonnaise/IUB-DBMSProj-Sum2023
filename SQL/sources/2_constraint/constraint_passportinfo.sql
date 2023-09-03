@@ -1,2 +1,2 @@
 ALTER TABLE Passport_Info
-ADD CONSTRAINT FK_customer FOREIGN KEY (customerId) REFERENCES customer_info(customerID);
+ADD CONSTRAINT Passport_Info__FK_customer FOREIGN KEY (pCustomerId) REFERENCES customer_info(customerID);

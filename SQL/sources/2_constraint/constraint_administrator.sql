@@ -1,2 +1,2 @@
 ALTER TABLE administrator
-ADD CONSTRAINT FK_Aemployee FOREIGN KEY (AemployeeId) REFERENCES employee(employeeID);
+ADD CONSTRAINT administrator__FK_Aemployee FOREIGN KEY (AemployeeId) REFERENCES employee(employeeID);
