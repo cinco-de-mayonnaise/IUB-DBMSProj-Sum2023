@@ -3,7 +3,7 @@
 
  
 $link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"lankabanglatest01");
+mysqli_select_db($link,"langkabanglatest01");
 
 $test=array();
 
@@ -38,7 +38,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		suffix:  ""
 	},
 	data: [{
-		type: "bar",
+		type: "column",
 		yValueFormatString: "#,##0",
 		indexLabel: "{y}",
 		indexLabelPlacement: "inside",

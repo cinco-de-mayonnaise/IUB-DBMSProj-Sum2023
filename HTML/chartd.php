@@ -35,7 +35,7 @@ window.onload = function() {
             data: [{
                 type: "pie",
                 indexLabel: "{y}",
-                yValueFormatString: "##0.00\"%\"",
+                yValueFormatString: "#,##0.00\"%\"",
                 indexLabelPlacement: "inside",
                 indexLabelFontColor: "#36454F",
                 indexLabelFontSize: 18,

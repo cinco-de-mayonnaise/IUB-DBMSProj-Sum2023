@@ -38,7 +38,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		suffix:  ""
 	},
 	data: [{
-		type: "bar",
+		type: "column",
 		yValueFormatString: "#,##0",
 		indexLabel: "{y}",
 		indexLabelPlacement: "inside",
