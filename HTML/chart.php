@@ -15,8 +15,8 @@ $test=array();
 
 $count=0;
 $res=mysqli_query($link,"SELECT COUNT(c.customerId),state
-FROM customer_info c, contact_info ci
-WHERE c.contactId=ci.contactId
+FROM bo_account b, customer_info c, contact_info ci
+WHERE b.customerId=c.customerId AND c.contactId=ci.contactId
 GROUP By state;");
 while($row=mysqli_fetch_array($res))
 {
