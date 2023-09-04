@@ -32,7 +32,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		text: "Number of BO A/C holders per division (Bar Chart)"
 	},
 	axisY: {
-		title: "Revenue (in USD)",
+		title: "Number of customers",
 		includeZero: true,
 		prefix: "",
 		suffix:  ""
