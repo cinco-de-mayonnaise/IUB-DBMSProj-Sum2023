@@ -3,7 +3,7 @@
 
  
 $link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"langkabanglatest01");
+mysqli_select_db($link,"lankabangla01");
 
 $test=array();
 
@@ -30,7 +30,7 @@ window.onload = function() {
  
     var chart = new CanvasJS.Chart("chartContainer", {
 	title: {
-		text: "chart name 6"
+		text: "Number of BO A/C opening year-wisely (Line Chart)"
 	},
 	axisY: {
 		title: "Number of Push-ups"

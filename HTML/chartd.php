@@ -3,7 +3,7 @@
 
  
 $link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"langkabanglatest01");
+mysqli_select_db($link,"lankabangla01");
 
 $test=array();
 
@@ -30,7 +30,7 @@ window.onload = function() {
             theme: "light2",
             animationEnabled: true,
             title: {
-                text: "chart name 4"
+                text: "Number of Male & Female BO A/C holders in a Branch (Pie Chart)"
             },
             data: [{
                 type: "pie",

@@ -3,7 +3,7 @@
 
  
 $link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"langkabanglatest01");
+mysqli_select_db($link,"lankabangla01");
 
 $test=array();
 
@@ -29,7 +29,7 @@ window.onload = function() {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title:{
-		text: "Number of BO A/C holders per division (Bar Chart)"
+		text: "Number of Male & Female BO A/C holders per division (Bar Chart)"
 	},
 	axisY: {
 		title: "Number of customers",

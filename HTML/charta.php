@@ -3,7 +3,7 @@
 
  
 $link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"langkabanglatest01");
+mysqli_select_db($link,"lankabangla01");
 
 $test=array();
 
