@@ -30,7 +30,7 @@ window.onload = function() {
  
     var chart = new CanvasJS.Chart("chartContainer", {
 	title: {
-		text: "chart name 6"
+		text: "Number of BO A/C opening year-wisely (Bar Chart)"
 	},
 	axisY: {
 		title: "Number of Push-ups"

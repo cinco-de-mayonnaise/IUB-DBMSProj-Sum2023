@@ -30,7 +30,7 @@ window.onload = function() {
             theme: "light2",
             animationEnabled: true,
             title: {
-                text: "chart name 4"
+                text: "Number of Male/Female BO A/C holders per Branch (Pie Chart)"
             },
             data: [{
                 type: "pie",

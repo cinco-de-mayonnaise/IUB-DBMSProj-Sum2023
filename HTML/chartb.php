@@ -29,7 +29,7 @@ window.onload = function() {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title:{
-		text: "Number of BO A/C holders per division (Bar Chart)"
+		text: "Number of BO A/C holders per Post Code (Bar Chart)"
 	},
 	axisY: {
 		title: "Number of customers",
