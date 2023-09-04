@@ -29,7 +29,11 @@ window.onload = function() {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title:{
+<<<<<<< HEAD
 		text: "Number of BO A/C holders achieved by each Customer Relationship Manager in a Branch (Bar Chart)"
+=======
+		text: "Number of BO A/C holders per Branch (Bar Chart)"
+>>>>>>> 10a6d7fb3149e9669f232c87e692b8088a3ed294
 	},
 	axisY: {
 		title: "Number of customers",
