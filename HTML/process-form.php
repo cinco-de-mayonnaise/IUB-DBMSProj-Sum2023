@@ -18,7 +18,8 @@ $fPerEmail=$_POST["fPerEmail"];
 $fOccupation=$_POST["fOccupation"];
 $fETin=$_POST["fETin"];
 
-
+$JclientCode=$_POST['JclientCode'];
+$AclientCode=$_POST["AclientCode"];
 $jAccountantName=$_POST["jAccountantName"];
 $jAccountantFHName=$_POST["jAccountant-F/H-Name"];
 $jAccountantMotherName=$_POST["jAccountantMotherName"];
@@ -53,18 +54,26 @@ if (mysqli_connect_errno()) {
 $sql = "INSERT INTO customer_info(customerID,customerName,fatherName,motherName,dob,occupation,eTinID)
         VALUES (?, ?, ?, ?,?,?,?)";
 
+
 $sql2 = "INSERT INTO first_ac_holder(FcustomerId)
         VALUES (?)";
 $sql3 = "INSERT INTO joint_ac_holder(JcustomerId)
             VALUES (?)";
-$sql4 = "INSERT INTO authorized_person(authoPerId)
+$sql4 = "INSERT INTO authorised_person(authoPerId)
         VALUES (?)";
+
+$sql5 = "INSERT INTO customer_info(customerID,customerName,fatherName,motherName,dob,occupation,eTinID)
+        VALUES (?, ?, ?, ?,?,?,?)";
+$sql6 = "INSERT INTO customer_info(customerID,customerName,fatherName,motherName,dob,occupation,eTinID)
+VALUES (?, ?, ?, ?,?,?,?)";
 
 
 $stmt = mysqli_stmt_init($conn);
 $stmt2 = mysqli_stmt_init($conn);
 $stmt3= mysqli_stmt_init($conn);
 $stmt4 = mysqli_stmt_init($conn);
+$stmt5 = mysqli_stmt_init($conn);
+$stmt6 = mysqli_stmt_init($conn);
 
 if ( ! mysqli_stmt_prepare($stmt, $sql)) {
  
@@ -83,6 +92,14 @@ if ( ! mysqli_stmt_prepare($stmt4, $sql4)) {
  
     die(mysqli_error($conn));
 }
+if ( ! mysqli_stmt_prepare($stmt5, $sql5)) {
+ 
+    die(mysqli_error($conn));
+}
+if ( ! mysqli_stmt_prepare($stmt6, $sql6)) {
+ 
+    die(mysqli_error($conn));
+}
 
 
 mysqli_stmt_bind_param($stmt, "isssssi",
@@ -90,10 +107,14 @@ $clientCode,$fAccountName,$fAccountFHName,$fAccountMName,$fDob,$fOccupation,$fET
 mysqli_stmt_bind_param($stmt2, "i",
 $clientCode);
 mysqli_stmt_bind_param($stmt3, "i",
-$clientCode);
+$JclientCode);
 mysqli_stmt_bind_param($stmt4, "i",
-$clientCode);
+$AclientCode);
+mysqli_stmt_bind_param($stmt5, "isssssi",
+$JclientCode,$aAccountantName,$aAccountantFHName,$aAccountantMotherName,$aDob,$aOccupation,$aETin);
 
+mysqli_stmt_bind_param($stmt6, "isssssi",
+$AclientCode,$jAccountantName,$jAccountantFHName,$jAccountantMotherName,$jDob,$jOccupation,$jETin);
 
 //==========stmt 1st===========
 if ($stmt->execute()) {
@@ -106,22 +127,20 @@ $stmt->close();
 //==========stmt2==========
 
 if ($stmt2->execute()) {
-    echo "\nData inserted successfully for the first query.";
+    echo "Data inserted successfully for the first query.";
 } else {
     echo "Error in the first query: " . $stmt2->error;
 }
 $stmt2->close();
 
-//==========stmt 2nd===========
-mysqli_stmt_bind_param($stmt, "isssssi",
-$clientCode,$jAccountantName,$jAccountantFHName,$jAccountantMotherName,$jDob,$jOccupation,$jETin);
+//==========stmt 5===========
 
-if ($stmt->execute()) {
+if ($stmt5->execute()) {
     echo "Data inserted successfully for the first query.";
 } else {
-    echo "Error in the first query: " . $stmt->error;
+    echo "Error in the first query: " . $stmt5->error;
 }
-$stmt->close();
+$stmt5->close();
 
 
 //==========stmt3===========
@@ -133,16 +152,14 @@ if ($stmt3->execute()) {
 $stmt3->close();
 
 
-//============stmt 3rd=========
-mysqli_stmt_bind_param($stmt, "isssssi",
-$clientCode,$aAccountantName,$aAccountantFHName,$aAccountantMotherName,$aDob,$aOccupation,$aETin);
+//============stmt 6=========
 
-if ($stmt->execute()) {
+if ($stmt6->execute()) {
     echo "Data inserted successfully for the first query.";
 } else {
-    echo "Error in the first query: " . $stmt->error;
+    echo "Error in the first query: " . $stmt6->error;
 }
-$stmt->close();
+$stmt6->close();
 
 
 //============stmt 4th=========
@@ -151,7 +168,7 @@ if ($stmt4->execute()) {
 } else {
     echo "Error in the first query: " . $stmt4->error;
 }
-$stmt->close();
+$stmt4->close();
 
 
 
