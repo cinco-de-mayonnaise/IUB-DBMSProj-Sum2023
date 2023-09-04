@@ -14,7 +14,25 @@
 -->
 
 <!DOCTYPE html>
+<?php 
+function connect_to_db()
+{
+	$servername = "localhost";
+	$dbusername = "root";
+	$dbpassword = "";
+	$dbname = "lankabanglatest01";
+	
+	// Create a new mysqli instance
+	$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+	
+	// Check connection
+	if ($conn->connect_error)
+		die("Connection failed: " . $conn->connect_error);
+		
+	return $conn;
+}
 
+?>
 <html lang="en">
 
 <head>
@@ -135,8 +153,21 @@
           
           
           <div class="row">
-            <div class="col-lg-6 col-md-12" id="chart">
-              
+            <div class="col-lg-6 col-md-12">
+            <button action="#" method="POST">sadfsa</button>
+              <?php
+              echo "<script>
+              var data = [
+              {
+                x: ['giraffes', 'orangutans', 'monkeys'],
+                y: [20, 14, 23],
+                type: 'bar'
+              }
+              ];
+
+              Plotly.newPlot('myDiv', data);
+            </script>";
+              ?>
             </div>
             <div class="col-lg-6 col-md-12">
               <div class="card">
@@ -263,11 +294,6 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-
-  <script type="text/javascript">
-    
-  </script>
-
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap-material-design.min.js"></script>

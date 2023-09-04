@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
-define('DB_NAME', 'database');
+define('DB_NAME', 'lankabanglatest01');
 
 // Create database connection
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -18,15 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $accOpeningDate = $_POST['acc_open_date'];
     $boCategory = $_POST['catagory'];
     $boType = $_POST['type'];
-    $statementCycleType = isset($_POST['scc_type']) ? $_POST['scc_type'] : array();
+    //$statementCycleType = isset($_POST['scc_type']) ? $_POST['scc_type'] : array();
     $customerId = $_POST['customer_id'];
     $bankId = $_POST['bank_id'];
 }
 
-$stmt1 = $conn->prepare("INSERT INTO bo_account(BOapplicationNo, accOpeningDate, boCategory, boType, statementCycleType, customerId, bankId) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt1 = $conn->prepare("INSERT INTO bo_account(BOapplicationNo, accOpeningDate, boCategory, boType, customerId, bankId) VALUES (?, ?, ?, ?, ?, ?)");
 
-$stmt1->bind_param("issssis", $BOapplicationNo, $accOpeningDate, $boCategory, $boType, $statementCycleType, $customerId, $bankId);
-
+$stmt1->bind_param("isssii", $BOapplicationNo, $accOpeningDate, $boCategory, $boType, $customerId, $bankId);
 // Execute the prepared statement for the first query
 if ($stmt1->execute()) {
     echo "Data inserted successfully for the first query.";
