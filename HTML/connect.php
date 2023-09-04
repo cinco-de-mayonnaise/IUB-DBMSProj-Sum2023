@@ -1,27 +1,11 @@
 <?php
-<<<<<<< HEAD
-// Database configuration
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'lankabanglatest01');
-
-// Create database connection
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-=======
->>>>>>> b8cae7beb902652f548379fafe3b6ef5b2a93ec7
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $BOapplicationNo = $_POST['app_id'];
     $accOpeningDate = $_POST['acc_open_date'];
     $boCategory = $_POST['catagory'];
     $boType = $_POST['type'];
-    //$statementCycleType = isset($_POST['scc_type']) ? $_POST['scc_type'] : array();
+    $statementCycleType = isset($_POST['scc_type']) ? $_POST['scc_type'] : array();
     $customerId = $_POST['customer_id'];
     $bankId = $_POST['bank_id'];
 }
@@ -31,16 +15,6 @@ var_dump($accType,$date,$clientCode,$linkCode,$fAccountName,$fAccountFHName,$fAc
 $fETin
 );
 
-<<<<<<< HEAD
-$stmt1 = $conn->prepare("INSERT INTO bo_account(BOapplicationNo, accOpeningDate, boCategory, boType, customerId, bankId) VALUES (?, ?, ?, ?, ?, ?)");
-
-$stmt1->bind_param("isssii", $BOapplicationNo, $accOpeningDate, $boCategory, $boType, $customerId, $bankId);
-// Execute the prepared statement for the first query
-if ($stmt1->execute()) {
-    echo "Data inserted successfully for the first query.";
-} else {
-    echo "Error in the first query: " . $stmt1->error;
-=======
 */
 /*
 $=$_POST[""];
@@ -62,7 +36,7 @@ if ( ! $terms) {
 */
 
 $host = "localhost";
-$dbname = "database";
+$dbname = "lankabanglatest01";
 $username = "root";
 $password = "";
         
@@ -83,7 +57,6 @@ $stmt = mysqli_stmt_init($conn);
 if ( ! mysqli_stmt_prepare($stmt, $sql)) {
  
     die(mysqli_error($conn));
->>>>>>> b8cae7beb902652f548379fafe3b6ef5b2a93ec7
 }
 
 mysqli_stmt_bind_param($stmt, "issssii",
@@ -92,3 +65,5 @@ $BOapplicationNo, $accOpeningDate, $boCategory, $boType, $statementCycleType, $c
 mysqli_stmt_execute($stmt);
 
 echo "Record saved.";
+
+?>
