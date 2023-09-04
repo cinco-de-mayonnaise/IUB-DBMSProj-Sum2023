@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2023 at 04:22 PM
+-- Generation Time: Sep 04, 2023 at 07:56 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `lankabanglatest01`
+-- Database: `lankabangla01`
 --
 
 -- --------------------------------------------------------
@@ -128,16 +128,18 @@ CREATE TABLE `bo_account` (
 --
 
 INSERT INTO `bo_account` (`BOapplicationNo`, `boCategory`, `boType`, `accOpeningDate`, `customerId`, `bankId`, `statementCycleType`) VALUES
-(1001, 'Savings', 'Personal', '2023-01-15', 103, 1003, 'Monthly'),
-(1002, 'Current', 'Business', '2023-02-20', 104, 1001, 'Quarterly'),
+(1001, 'Savings', 'Personal', '2017-01-10', 103, 1003, 'Monthly'),
+(1002, 'Current', 'Business', '2014-02-18', 104, 1001, 'Quarterly'),
 (1003, 'Savings', 'Joint', '2023-03-10', 101, 1006, 'Monthly'),
-(1004, 'Fixed Deposit', 'Personal', '2023-04-05', 101, 1015, 'Annually'),
+(1004, 'Fixed Deposit', 'Personal', '2012-04-10', 101, 1015, 'Annually'),
 (1005, 'Current', 'Business', '2023-05-12', 104, 1020, 'Monthly'),
 (1006, 'Savings', 'Personal', '2023-01-15', 106, 1003, 'Monthly'),
 (1007, 'Current', 'Business', '2023-02-20', 107, 1001, 'Quarterly'),
 (1008, 'Savings', 'Joint', '2023-03-10', 108, 1006, 'Monthly'),
-(1009, 'Fixed Deposit', 'Personal', '2023-04-05', 109, 1015, 'Annually'),
-(1010, 'Current', 'Business', '2023-05-12', 110, 1020, 'Monthly');
+(1009, 'Fixed Deposit', 'Personal', '2013-04-24', 109, 1015, 'Annually'),
+(1010, 'Current', 'Business', '2023-05-12', 110, 1020, 'Monthly'),
+(1011, 'New1', '123', '2014-09-18', 105, 1004, 'regular'),
+(1012, 'new2', 'regular2', '2014-09-18', 103, 1016, 'vip');
 
 -- --------------------------------------------------------
 
@@ -250,20 +252,20 @@ CREATE TABLE `customer_info` (
   `BOapplicationNo` int(11) DEFAULT NULL,
   `BONapplicationNo` int(11) DEFAULT NULL,
   `POAapplicationNo` int(11) DEFAULT NULL
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `customer_info`
 --
 
 INSERT INTO `customer_info` (`customerID`, `customerName`, `fatherName`, `motherName`, `husbandName`, `dob`, `gender`, `contactID`, `occupation`, `drivingLicenseNo`, `signature`, `eTinID`, `customerType`, `introducerID`, `introducerContact`, `bankID`, `bankAccNo`, `BOapplicationNo`, `BONapplicationNo`, `POAapplicationNo`) VALUES
-(101, 'John Doe', 'Johns Father', 'Johns Mother', 'Karim', '1990-01-01', 'Male', 1001, 'Engineer', 'DL12345', '', '1234567890', 'first_acc', 7890, '7890123456', 1013, '1234567890', 123, 123, 123),
-(102, 'Jane Smith', 'Janes Father', 'Janes Mother', 'Rahim', '1995-03-15', 'Female', 1003, 'Doctor', 'DL54321', '', '0987654321', 'joint_acc', 6543, '6543210987', 1003, '9876543210', 456, 456, 456),
-(103, 'Alice Johnson', 'Alices Father', 'Alices Mother', 'Sohel', '1988-07-20', 'Female', 1005, 'Teacher', 'DL98765', '', '5678901234', 'corporate_client', 4321, '4321098765', 1017, '3456789012', 89, 789, 789),
+(101, 'John Doe', 'Johns Father', 'Johns Mother', 'Karim', '1990-01-01', 'Male', 1001, 'Engineer', 'DL12345', '', '1234567890', 'first_acc', 7890, '7890123456', 1010, '1234567890', 123, 123, 123),
+(102, 'Jane Smith', 'Janes Father', 'Janes Mother', 'Rahim', '1995-03-15', 'Female', 1003, 'Doctor', 'DL54321', '', '0987654321', 'joint_acc', 6543, '6543210987', 1010, '9876543210', 456, 456, 456),
+(103, 'Alice Johnson', 'Alices Father', 'Alices Mother', 'Sohel', '1988-07-20', 'Female', 1005, 'Teacher', 'DL98765', '', '5678901234', 'corporate_client', 4321, '4321098765', 1010, '3456789012', 89, 789, 789),
 (104, 'Bob Wilson', 'Bobs Father', 'Bobs Mother', 'Joy', '1992-11-08', 'Male', 1002, 'Lawyer', 'DL24680', '', '3456789012', 'first_acc', 8765, '8765432109', 1012, '4567890123', 0, 12, 12),
-(105, 'Eva Brown', 'Eva Father', 'Evas Mother', 'Mehedi', '1997-05-25', 'Female', 1004, 'Accountant', 'DL13579', '', '2345678901', 'joint_acc', 1234, '1234567890', 1007, '5678901234', 345, 345, 345),
-(106, 'John Doe', 'Johns Father', 'Johns Mother', 'Karim', '1990-01-01', 'Male', 1006, 'Engineer', 'DL12345', '', '1234567890', 'first_acc', 7890, '7890123456', 1013, '1234567890', 123, 123, 123),
-(107, 'Jane Smith', 'Janes Father', 'Janes Mother', 'Rahim', '1995-03-15', 'Female', 1007, 'Doctor', 'DL54321', '', '0987654321', 'joint_acc', 6543, '6543210987', 1003, '9876543210', 456, 456, 456),
+(105, 'Eva Brown', 'Eva Father', 'Evas Mother', 'Mehedi', '1997-05-25', 'Female', 1004, 'Accountant', 'DL13579', '', '2345678901', 'joint_acc', 1234, '1234567890', 1012, '5678901234', 345, 345, 345),
+(106, 'John Doe', 'Johns Father', 'Johns Mother', 'Karim', '1990-01-01', 'Male', 1006, 'Engineer', 'DL12345', '', '1234567890', 'first_acc', 7890, '7890123456', 1012, '1234567890', 123, 123, 123),
+(107, 'Jane Smith', 'Janes Father', 'Janes Mother', 'Rahim', '1995-03-15', 'Female', 1007, 'Doctor', 'DL54321', '', '0987654321', '', 6543, '6543210987', 1003, '9876543210', 456, 456, 456),
 (108, 'Alice Johnson', 'Alices Father', 'Alices Mother', 'Sohel', '1988-07-20', 'Female', 1008, 'Teacher', 'DL98765', '', '5678901234', 'corporate_client', 4321, '4321098765', 1017, '3456789012', 89, 789, 789),
 (109, 'Bob Wilson', 'Bobs Father', 'Bobs Mother', 'Joy', '1992-11-08', 'Male', 1009, 'Lawyer', 'DL24680', '', '3456789012', 'first_acc', 8765, '8765432109', 1012, '4567890123', 0, 12, 12),
 (110, 'Eva Brown', 'Eva Father', 'Evas Mother', 'Mehedi', '1997-05-25', 'Female', 1010, 'Accountant', 'DL13579', '', '2345678901', 'joint_acc', 1234, '1234567890', 1007, '5678901234', 345, 345, 345);
@@ -296,7 +298,7 @@ CREATE TABLE `employee` (
   `contactId` int(11) DEFAULT NULL,
   `signature` longblob DEFAULT NULL,
   `employeeType` varchar(100) DEFAULT NULL
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -668,61 +670,11 @@ ALTER TABLE `credit_facility`
   ADD CONSTRAINT `Credit_Facility__FK_customer` FOREIGN KEY (`customerID`) REFERENCES `customer_info` (`customerID`);
 
 --
--- Constraints for table `customer_info`
---
-ALTER TABLE `customer_info`
-  ADD CONSTRAINT `customer_info__FK_Customer_Info` FOREIGN KEY (`contactID`) REFERENCES `contact_info` (`contactID`),
-  ADD CONSTRAINT `customer_info__FK_bank` FOREIGN KEY (`bankID`) REFERENCES `bank_info` (`bankId`),
-  ADD CONSTRAINT `customer_info__FK_introducer` FOREIGN KEY (`introducerID`) REFERENCES `introducer_info` (`introducerID`);
-
---
 -- Constraints for table `eft`
 --
 ALTER TABLE `eft`
   ADD CONSTRAINT `eft__FK_bank` FOREIGN KEY (`bankId`) REFERENCES `bank_info` (`bankId`),
   ADD CONSTRAINT `eft__FK_customer` FOREIGN KEY (`customerId`) REFERENCES `customer_info` (`customerID`);
-
---
--- Constraints for table `employee`
---
-ALTER TABLE `employee`
-  ADD CONSTRAINT `employee__FK_contact` FOREIGN KEY (`contactId`) REFERENCES `contact_info` (`contactID`);
-
---
--- Constraints for table `first_ac_holder`
---
-ALTER TABLE `first_ac_holder`
-  ADD CONSTRAINT `First_AC_Holder__FK_customer` FOREIGN KEY (`FcustomerId`) REFERENCES `customer_info` (`customerID`);
-
---
--- Constraints for table `guardian_info`
---
-ALTER TABLE `guardian_info`
-  ADD CONSTRAINT `guardian_info__FK_contact` FOREIGN KEY (`contactID`) REFERENCES `contact_info` (`contactID`);
-
---
--- Constraints for table `head_of_settlement`
---
-ALTER TABLE `head_of_settlement`
-  ADD CONSTRAINT `Head_of_Settlement__FK_HoSemployee` FOREIGN KEY (`HoSemployeeId`) REFERENCES `employee` (`employeeId`);
-
---
--- Constraints for table `joint_ac_holder`
---
-ALTER TABLE `joint_ac_holder`
-  ADD CONSTRAINT `Joint_AC_Holder__FK_Jcustomer` FOREIGN KEY (`JcustomerId`) REFERENCES `customer_info` (`customerID`);
-
---
--- Constraints for table `passport_info`
---
-ALTER TABLE `passport_info`
-  ADD CONSTRAINT `Passport_Info__FK_customer` FOREIGN KEY (`pCustomerId`) REFERENCES `customer_info` (`customerID`);
-
---
--- Constraints for table `relationship_manager`
---
-ALTER TABLE `relationship_manager`
-  ADD CONSTRAINT `relationship_manager__FK_RMemployee` FOREIGN KEY (`RMemployeeID`) REFERENCES `employee` (`employeeId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
