@@ -37,7 +37,7 @@ $aETin=$_POST["aE-Tin"];
 
 
 $host = "localhost";
-$dbname = "lankabanglatest01";
+$dbname = "lankabangla01";
 $username = "root";
 $password = "";
         

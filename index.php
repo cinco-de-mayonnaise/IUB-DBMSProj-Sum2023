@@ -2,10 +2,10 @@
 <?php 
 function connect_to_db()
 {
-	$servername = "localhost:3307";
+	$servername = "localhost";
 	$dbusername = "root";
-	$dbpassword = "root";
-	$dbname = "lankabangla";
+	$dbpassword = "";
+	$dbname = "lankabangla01";
 	
 	// Create a new mysqli instance
 	$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);

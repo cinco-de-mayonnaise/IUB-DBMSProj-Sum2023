@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2023 at 07:56 PM
+-- Generation Time: Sep 05, 2023 at 04:32 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -66,7 +66,8 @@ CREATE TABLE `authorised_person` (
 
 INSERT INTO `authorised_person` (`authoPerId`, `isShareHolderOfStock`, `signature`, `ACcustomerId`) VALUES
 (103, NULL, NULL, NULL),
-(767, NULL, NULL, NULL);
+(767, NULL, NULL, NULL),
+(213132, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -259,16 +260,19 @@ CREATE TABLE `customer_info` (
 --
 
 INSERT INTO `customer_info` (`customerID`, `customerName`, `fatherName`, `motherName`, `husbandName`, `dob`, `gender`, `contactID`, `occupation`, `drivingLicenseNo`, `signature`, `eTinID`, `customerType`, `introducerID`, `introducerContact`, `bankID`, `bankAccNo`, `BOapplicationNo`, `BONapplicationNo`, `POAapplicationNo`) VALUES
-(101, 'John Doe', 'Johns Father', 'Johns Mother', 'Karim', '1990-01-01', 'Male', 1001, 'Engineer', 'DL12345', '', '1234567890', 'first_acc', 7890, '7890123456', 1010, '1234567890', 123, 123, 123),
+(101, 'John Doe', 'Johns Father', 'Johns Mother', 'Karim', '1990-01-01', 'Female', 1001, 'Engineer', 'DL12345', '', '1234567890', 'first_acc', 7890, '7890123456', 1010, '1234567890', 123, 123, 123),
 (102, 'Jane Smith', 'Janes Father', 'Janes Mother', 'Rahim', '1995-03-15', 'Female', 1003, 'Doctor', 'DL54321', '', '0987654321', 'joint_acc', 6543, '6543210987', 1010, '9876543210', 456, 456, 456),
 (103, 'Alice Johnson', 'Alices Father', 'Alices Mother', 'Sohel', '1988-07-20', 'Female', 1005, 'Teacher', 'DL98765', '', '5678901234', 'corporate_client', 4321, '4321098765', 1010, '3456789012', 89, 789, 789),
-(104, 'Bob Wilson', 'Bobs Father', 'Bobs Mother', 'Joy', '1992-11-08', 'Male', 1002, 'Lawyer', 'DL24680', '', '3456789012', 'first_acc', 8765, '8765432109', 1012, '4567890123', 0, 12, 12),
+(104, 'Bob Wilson', 'Bobs Father', 'Bobs Mother', 'Joy', '1992-11-08', 'Female', 1002, 'Lawyer', 'DL24680', '', '3456789012', 'first_acc', 8765, '8765432109', 1012, '4567890123', 0, 12, 12),
 (105, 'Eva Brown', 'Eva Father', 'Evas Mother', 'Mehedi', '1997-05-25', 'Female', 1004, 'Accountant', 'DL13579', '', '2345678901', 'joint_acc', 1234, '1234567890', 1012, '5678901234', 345, 345, 345),
 (106, 'John Doe', 'Johns Father', 'Johns Mother', 'Karim', '1990-01-01', 'Male', 1006, 'Engineer', 'DL12345', '', '1234567890', 'first_acc', 7890, '7890123456', 1012, '1234567890', 123, 123, 123),
 (107, 'Jane Smith', 'Janes Father', 'Janes Mother', 'Rahim', '1995-03-15', 'Female', 1007, 'Doctor', 'DL54321', '', '0987654321', '', 6543, '6543210987', 1003, '9876543210', 456, 456, 456),
 (108, 'Alice Johnson', 'Alices Father', 'Alices Mother', 'Sohel', '1988-07-20', 'Female', 1008, 'Teacher', 'DL98765', '', '5678901234', 'corporate_client', 4321, '4321098765', 1017, '3456789012', 89, 789, 789),
 (109, 'Bob Wilson', 'Bobs Father', 'Bobs Mother', 'Joy', '1992-11-08', 'Male', 1009, 'Lawyer', 'DL24680', '', '3456789012', 'first_acc', 8765, '8765432109', 1012, '4567890123', 0, 12, 12),
-(110, 'Eva Brown', 'Eva Father', 'Evas Mother', 'Mehedi', '1997-05-25', 'Female', 1010, 'Accountant', 'DL13579', '', '2345678901', 'joint_acc', 1234, '1234567890', 1007, '5678901234', 345, 345, 345);
+(110, 'Eva Brown', 'Eva Father', 'Evas Mother', 'Mehedi', '1997-05-25', 'Female', 1010, 'Accountant', 'DL13579', '', '2345678901', 'joint_acc', 1234, '1234567890', 1007, '5678901234', 345, 345, 345),
+(12313, 'name1', 'father1', 'mother1', NULL, '2023-09-13', NULL, NULL, 'Engineer', NULL, '', '32324', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(213132, 'AMin2', 'father02', 'mother02', NULL, '2023-09-14', NULL, NULL, 'Doctor', NULL, '', '32424', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10000344, 'Name1', 'father03', 'mother03', NULL, '2023-09-14', NULL, NULL, 'Tailor', NULL, '', '8676', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -316,7 +320,8 @@ CREATE TABLE `first_ac_holder` (
 --
 
 INSERT INTO `first_ac_holder` (`FcustomerId`, `boId`) VALUES
-(101, 0);
+(101, 0),
+(12313, 0);
 
 -- --------------------------------------------------------
 
@@ -378,7 +383,8 @@ CREATE TABLE `joint_ac_holder` (
 
 INSERT INTO `joint_ac_holder` (`JcustomerId`, `boId`) VALUES
 (23, 0),
-(102, 0);
+(102, 0),
+(10000344, 0);
 
 -- --------------------------------------------------------
 
@@ -392,6 +398,28 @@ CREATE TABLE `kyc_profile` (
   `passportNumber` int(11) DEFAULT NULL,
   `fundSource` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `username` varchar(30) NOT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `usertype` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`username`, `password`, `usertype`) VALUES
+('admin', 'admin', 'Admin'),
+('customer', 'customer', 'Customer'),
+('head', 'head', 'Head'),
+('relation', 'relation', 'RelManager');
 
 -- --------------------------------------------------------
 
@@ -585,6 +613,12 @@ ALTER TABLE `joint_ac_holder`
 --
 ALTER TABLE `kyc_profile`
   ADD PRIMARY KEY (`customerId`,`employeeId`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`username`);
 
 --
 -- Indexes for table `nominee`

@@ -15,7 +15,7 @@ GROUP By gender;");
 while($row=mysqli_fetch_array($res))
 {
 	$test[$count]["label"]=$row["gender"];
-	$test[$count]["y"]=$row["N"];
+	$test[$count]["y"]=($row["N"]*10);
 	$count=$count+1;
 }
 
